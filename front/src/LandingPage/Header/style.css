@@ -1,0 +1,39 @@
+#header{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+}
+
+#image{
+    height: 150px;
+    width: 300px;
+}
+
+#lista{
+    position: relative;
+    margin-top: 50px;
+}
+
+#options{
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline;
+    color: black;
+    font-size: xx-large;
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: grey;
+}
+
+#sign{
+    position: relative;
+    font-size: large;
+    padding-left: 50px;
+}
+

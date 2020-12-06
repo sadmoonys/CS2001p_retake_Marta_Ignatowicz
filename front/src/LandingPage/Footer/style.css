@@ -1,0 +1,11 @@
+footer{
+    width: auto;
+    height: 100px;
+    background-color: #D3D3D3;
+}
+
+#power{
+    position: relative;
+    top: 50%;
+    font-size: x-large;
+}
