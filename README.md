@@ -7,4 +7,4 @@ Noteware development
 Essentially a social media app for studying, where users are able to share notes with other users globally.
 
 
-Leo was here
+Nikhil made changes
