@@ -8,7 +8,7 @@ class Header extends Component {
            <header id="header">
                <img src={NWLOGO} alt="" id="image"/>
                <ul id="lista" >
-                   <li id="options"><a href="">HOME</a></li>
+                   <li id="options"><a href=""><b>HOME</b></a></li>
                    <li id="options"><a href="">DISCOVERY</a></li>
                    <li id="options"><a href="">SOCIAL</a></li>
                </ul>

@@ -10,12 +10,13 @@
 
 #lista{
     position: relative;
-    margin-top: 50px;
+    margin-top: 40px;
+    padding-right: -60px;
 }
 
 #options{
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 20x;
     display: inline;
     color: black;
     font-size: xx-large;
@@ -34,6 +35,6 @@ a:hover{
 #sign{
     position: relative;
     font-size: large;
-    padding-left: 50px;
+    padding-left: 30px;
 }
 
