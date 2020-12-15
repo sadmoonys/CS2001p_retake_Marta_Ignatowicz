@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NWLOGO from '/Desktop/GitHub/Front-End/front/src/Images/NWLOGO.png'
+import NWLOGO from '/Documents/GitHub/Front-End/front/src/Images/NWLOGO.png'
 import './style.css'
 
 class Header extends Component {
