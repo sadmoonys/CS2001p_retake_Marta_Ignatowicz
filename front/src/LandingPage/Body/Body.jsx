@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './style.css'
-import Screens from "/Users/leona/Desktop/GitHub/Front-End/front/src/Images/screens.png"
+import Screens from "/Users/mirna/Documents/GitHub/cs2001-2020_21-group15/front/src/Images/screens.png"
 import Check from"/Users/leona/Desktop/GitHub/Front-End/front/src/Images/check.png"
 
 class Body extends Component {
