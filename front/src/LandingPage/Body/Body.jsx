@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './style.css'
 import Screens from "/Users/mirna/Documents/GitHub/cs2001-2020_21-group15/front/src/Images/screens.png"
 import Check from"/Users/mirna/Documents/GitHub/cs2001-2020_21-group15/front/src/Images/check.png"
+import paper from"/Users/mirna/Documents/GitHub/cs2001-2020_21-group15/front/src/Images/paper.png"
 
 class Body extends Component {
     render() { 
@@ -16,7 +17,7 @@ class Body extends Component {
                     <p id="what">WHAT IS NOTEWARE?</p>
                     <div id="aboutBox1"> <p> <b>NOTEWARE is a notetaking app that aims to address the UN's goal to provide Quality Education for everyone. <br></br> <br></br> <br></br>
                     We aim to help students connect and learn through our app. You can use our collabroative platform to create, edit and share notes as well as categorise them using hashtags to help improve your search. <br></br> </b>  <b> Thanks to the app being interactive, you can use feedback left by other students to improve your notes and get the most of your time! </b></p> <br></br></div>
-                    
+          
                 </div>
                 
                 <div>
@@ -33,6 +34,8 @@ class Body extends Component {
                        <img id="greenCheck1" src={Check} alt=""/>  
                         <img id="greenCheck2" src={Check} alt=""/> 
                         <img id="greenCheck3" src={Check} alt=""/> 
+                        <img id="paper" src={paper} alt=""/> 
+                      
                    </div>
                   
                 </div>
