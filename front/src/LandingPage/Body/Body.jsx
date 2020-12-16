@@ -21,14 +21,17 @@ class Body extends Component {
                 
                 <div>
                     <img id="screens"  src={Screens} alt=""/>
-                   <div id="greenCheckers">
-                       <img id="greenCheck1" src={Check} alt=""/> 
+                   <div id="greenCheckers"> 
+                  
+                       <img id="greenCheck1" src={Check} alt=""/>   
+                       <p id="check1"> Notesfeed- can share your notes with Friends</p>
                        
-                        <img id="greenCheck2" src={Check} alt=""/>
-                        <img id="greenCheck3" src={Check} alt=""/>
+                        <img id="greenCheck2" src={Check} alt=""/> <p> Comment section- You can recieve feedbacks from your collegues and help them by commenting your thoughts! </p>
+                        <img id="greenCheck3" src={Check} alt=""/> <p> Votes and Ranks- You can vote what the best notes and resumes. The more votes your notes gets the higher it goes on the ranking!</p>
                    </div>
                   
                 </div>
+            
             </body>
         );
     }

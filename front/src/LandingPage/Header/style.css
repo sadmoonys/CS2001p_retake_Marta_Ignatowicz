@@ -33,7 +33,7 @@ a:hover{
 }
 
 .btn {
-    border: 2px solid rgb(13, 47, 156);
+    border: 2px solid rgb(10, 13, 185);
     background-color: rgb(19, 108, 190);
     color: black;
     padding: 5px 28px;
@@ -41,8 +41,10 @@ a:hover{
     cursor: pointer;
     height: 40px;
     width: 200px;
-    padding-left: 30px;
-    position: relative;
+    padding-right: 30px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
   
 }
 
