@@ -16,7 +16,7 @@
 
 #options{
     padding-left: 20px;
-    padding-right: 20x;
+    padding-right: 10px;
     display: inline;
     color: black;
     font-size: xx-large;
@@ -32,9 +32,18 @@ a:hover{
     color: grey;
 }
 
-#sign{
-    position: relative;
-    font-size: large;
+.btn {
+    border: 2px solid rgb(13, 47, 156);
+    background-color: rgb(19, 108, 190);
+    color: black;
+    padding: 5px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    height: 40px;
+    width: 200px;
     padding-left: 30px;
+    position: relative;
+  
 }
+
 

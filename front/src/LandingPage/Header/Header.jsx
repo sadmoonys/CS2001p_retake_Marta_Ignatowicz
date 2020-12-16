@@ -12,11 +12,14 @@ class Header extends Component {
                    <li id="options"><a href="">DISCOVERY</a></li>
                    <li id="options"><a href="">SOCIAL</a></li>
                </ul>
-               <p id="sign"><a href="">sign In</a></p>
+               <button class="btn">SIGN IN</button>
            </header> 
-            
+      
         );
     }
+    
+  
 }
+
  
 export default Header;
