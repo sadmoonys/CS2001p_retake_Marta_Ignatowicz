@@ -3,6 +3,7 @@ import './style.css'
 import Screens from "/Users/mirna/Documents/GitHub/cs2001-2020_21-group15/front/src/Images/screens.png"
 import Check from"/Users/mirna/Documents/GitHub/cs2001-2020_21-group15/front/src/Images/check.png"
 import paper from"/Users/mirna/Documents/GitHub/cs2001-2020_21-group15/front/src/Images/paper.png"
+import notes from"/Users/mirna/Documents/GitHub/cs2001-2020_21-group15/front/src/Images/sharenotes.png"
 
 class Body extends Component {
     render() { 
@@ -35,6 +36,7 @@ class Body extends Component {
                         <img id="greenCheck2" src={Check} alt=""/> 
                         <img id="greenCheck3" src={Check} alt=""/> 
                         <img id="paper" src={paper} alt=""/> 
+                        <img id="notes" src={notes} alt=""/> 
                       
                    </div>
                   
