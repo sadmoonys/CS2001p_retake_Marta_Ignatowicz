@@ -23,11 +23,16 @@ class Body extends Component {
                     <img id="screens"  src={Screens} alt=""/>
                    <div id="greenCheckers"> 
                   
-                       <img id="greenCheck1" src={Check} alt=""/>   
-                       <p id="check1"> Notesfeed- can share your notes with Friends</p>
+                     
+                    
+                       <div id="boxcheck1"> <b></b>   <p>  BENIFITS OF USING NOTEWARE </p> <br></br>   <br></br>      <p> Notesfeed- You can share your notes with Friends  </p>   <br></br>           <p>  Comment section- You can recieve feedbacks from your collegues and help them by commenting your thoughts!</p>   <br></br>      <p> Votes and Ranks- You can vote what the best notes and resumes. </p>
                        
-                        <img id="greenCheck2" src={Check} alt=""/> <p> Comment section- You can recieve feedbacks from your collegues and help them by commenting your thoughts! </p>
-                        <img id="greenCheck3" src={Check} alt=""/> <p> Votes and Ranks- You can vote what the best notes and resumes. The more votes your notes gets the higher it goes on the ranking!</p>
+                       </div>
+                     
+       
+                       <img id="greenCheck1" src={Check} alt=""/>  
+                        <img id="greenCheck2" src={Check} alt=""/> 
+                        <img id="greenCheck3" src={Check} alt=""/> 
                    </div>
                   
                 </div>
