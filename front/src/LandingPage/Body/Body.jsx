@@ -10,7 +10,9 @@ class Body extends Component {
         return (  
             <body className="body">
                <div id="box">    
-                   <p id='signUp'><a href="">Sign Up</a></p>
+                   <p id='signUp'>  
+                  <a href="Sbody.html"> SIGN UP </a> </p>
+                   
                    <p > <b>JOIN NOTWARE TODAY!</b></p>
                 </div> 
                 
