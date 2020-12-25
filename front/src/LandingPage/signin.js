@@ -1,16 +1,12 @@
-import React from 'react';
-import './App.css';
-
-function signin() {
-
-return (
-
+//page/signin.js
+import React from "react";
+const signin =() => (
 <div>
-<h1> SIGN IN  Page</h1>
+
+<p> This is a sign in page testing </p>
 
 </div>
 
 );
-}
 
 export default signin;
