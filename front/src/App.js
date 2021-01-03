@@ -1,25 +1,17 @@
 import React from 'react';
 import LandingIndex from './LandingPage/LandingIndex'
-import {BrowserRouter as Router,Switch} from 'react-router-dom';
-export class RoutingClass extends React.Component{
-    render(){
-        <Router>
-            <Switch>
-                <Route exact path="/signin" component={signin} />
-            </Switch>
-        </Router>
-    }
-}
-
-
+import SignIn from './SignInPage/SignInPage'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
-  return (
-    <LandingIndex/> 
-
-     
-  );
+    return ( 
+        <Router>
+            <Switch>
+                <Route path="/home" component={LandingIndex}/>
+                <Route path="/SignIn" component={SignIn}/>
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;
-

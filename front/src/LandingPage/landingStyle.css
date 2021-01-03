@@ -1,0 +1,70 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.firstBox {
+    display: flex;
+    max-width: 1200px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+}
+
+.signUp {
+    border-style: solid;
+}
+
+.aboutBox {
+    margin: 3%;
+    border-style: solid;
+    border-color: yellow;
+}
+
+.collaboration {
+    width: 70%;
+}
+
+.secondBox {
+    display: flex;
+    max-width: 1200px;
+}
+
+.benfits {
+    margin: 3%;
+    border-style: solid;
+    border-color: yellow;
+}
+
+.screens {
+    width: 50%;
+}
+
+@media screen and (max-width: 760px) {
+    main {}
+    .firstBox {
+        display: block;
+    }
+    .box {
+        display: block;
+        align-items: center;
+    }
+    .signUp {
+        margin-left: 8%;
+    }
+    .collaboration {
+        width: 50%;
+        margin-right: 8%;
+    }
+    .secondBox {
+        display: block;
+    }
+    .screens {
+        width: 50%;
+    }
+}

@@ -1,0 +1,51 @@
+    .header {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .header .image {
+        width: 30%;
+        max-width: 200px;
+    }
+    
+    nav {
+        width: 35%;
+        max-width: 500px;
+    }
+    
+    li {
+        list-style-type: none;
+        display: inline;
+        align-content: center;
+        justify-content: center;
+        vertical-align: middle;
+    }
+    
+    .options {
+        text-decoration: none;
+        color: black;
+        font-size: x-large;
+        margin-right: 4%;
+    }
+    
+    .options:hover {
+        color: grey;
+    }
+    
+    .btn {
+        width: 30%;
+        height: 10%;
+        border: 2%;
+        margin-left: 5%;
+        max-width: 90px;
+        align-content: center;
+        justify-content: center;
+        vertical-align: middle;
+    }
+    
+    @media screen and (max-width: 760px) {
+        li {
+            display: block;
+        }
+    }
