@@ -5,6 +5,7 @@ import Screens from "../Images/screens.png"
 import Check from"../Images/check.png"
 import paper from"../Images/paper.png"
 import notes from"../Images/sharenotes.png"
+import {Link} from 'react-router-dom'; 
 import "./LandingStyle.css"
 
 
@@ -18,7 +19,10 @@ class LandingIndex extends Component {
                     <div class="box"> 
                         <img class="collaboration" src={notes} alt=""/>
                         <p class='signUp'>  
-                            <a href=""> SIGN UP </a> 
+                        
+                            <Link to="/Signup" class="btn">
+                        <button>SIGN UP HERE </button> 
+                    </Link>
                             <p>JOIN NOTWARE TODAY!</p>
                         </p>
                     </div> 
