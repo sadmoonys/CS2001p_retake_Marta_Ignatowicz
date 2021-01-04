@@ -10,6 +10,7 @@ import java.util.Date;
 public class Notes {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    //Creating columns in the notes table
     private Integer noteId;
 
     private Integer userId;

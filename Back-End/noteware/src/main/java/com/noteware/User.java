@@ -10,6 +10,7 @@ import java.util.Date;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    //Creating columns in user table
     private Integer userId;
 
     private String authMethod;
