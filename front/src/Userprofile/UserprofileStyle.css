@@ -1,0 +1,30 @@
+.profiledetails{
+
+    background-color: #fafafa;
+    text-align: center;
+    border-style: solid;
+    border-color: rgb(253, 255, 255);
+    margin: 5%;
+    width:500px
+}
+
+.yellow{
+    width: 25%;
+   
+
+}
+
+.light_blue{
+
+    width:25%
+
+}
+.red{
+    width:25%
+}
+.green{
+    width:25%
+}
+.side{
+    margin:80px;
+}
