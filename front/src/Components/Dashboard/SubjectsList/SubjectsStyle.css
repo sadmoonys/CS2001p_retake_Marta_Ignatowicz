@@ -1,0 +1,12 @@
+.list {
+    width: 100%;
+}
+
+.subjects {
+    background-color: yellow;
+    margin: 1%;
+    width: 90%;
+    border-style: solid;
+    border-color: black;
+    font-size: x-large;
+}

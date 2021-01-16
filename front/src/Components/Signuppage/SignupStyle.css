@@ -4,7 +4,6 @@ main {
     text-align: center;
 }
 
-
 .yellowBox {
     width: 70%;
     background-color: #fff76a;
@@ -15,7 +14,7 @@ main {
     margin: 5%;
 }
 
-.Signup{
+.Signup {
     font-size: x-large;
     font-weight: bold;
 }
@@ -27,8 +26,6 @@ main {
     width: 40%;
 }
 
-
-
 label {
     display: block;
     margin: 0;
@@ -39,4 +36,3 @@ label {
     transition: 400ms;
     width: auto;
 }
-

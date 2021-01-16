@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NWLOGO from '../Images/NWLOGO.png'
+import NWLOGO from '../../Images/NWLOGO.png'
 import './style.css'
 import {Link} from 'react-router-dom'; 
 
