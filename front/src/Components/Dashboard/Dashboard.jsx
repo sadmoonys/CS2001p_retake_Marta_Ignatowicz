@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Header from '../Header/Header'
 import Footer from "../Footer/Footer"
 import SubjectsList from "./SubjectsList/SubjectsList"
+import NewNote from './NewNote/NewNote'
+
 import './DashboardStyle.css'
 
 class Dashboard extends Component {
@@ -34,14 +36,14 @@ class Dashboard extends Component {
         event.preventDefault();
     }
 
-    deleteItem(){
-        console.log("deletar")
-    }
-
     render() { 
         return (  
              <html>
                  <Header/>
+                <form >
+                    <NewNote/>
+                </form>
+                
                 <form onSubmit={this.addItem}>
                         <input type="text" placeholder="Insert your subject"  ref={(a) => this._inputElement = a}/>
                         <button class="button">Create</button>
@@ -49,10 +51,9 @@ class Dashboard extends Component {
                             <p>name</p>
                             <p>date</p>
                         </div>
-                        <br/>
-                        <br/>
+                          <br/>
+                          <br/>
                         <SubjectsList 
-                        delete = {this.deleteItem.bind(this)}
                         entries={this.state.items} />
                 </form>
                  <Footer/>

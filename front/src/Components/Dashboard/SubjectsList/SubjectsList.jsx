@@ -4,8 +4,7 @@ import {ReactComponent as Delete} from '../../../Images/delete.svg'
 class SubjectsList extends Component {
     createTasks(item){
         return <div className="subjects" key={item.key}> 
-        {item.text} <Delete />  
-        </div>
+        {item.text} <Delete /> </div>
     }
 
     render() { 
