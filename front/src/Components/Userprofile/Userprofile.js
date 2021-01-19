@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
-import red from"../Images/red.png"
-import green from"../Images/green.png"
-import yellow from"../Images/yellow.png"
-import light_blue from"../Images/light_blue.png"
+import red from"../../Images/red.png"
+import green from"../../Images/green.png"
+import yellow from"../../Images/yellow.png"
+import light_blue from"../../Images/light_blue.png"
 import "./UserprofileStyle.css"
 
 class Userprofile extends Component {
