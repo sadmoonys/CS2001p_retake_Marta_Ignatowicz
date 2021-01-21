@@ -19,11 +19,16 @@ class NewNote extends Component {
   render() {
     return (
      <div>
+       
+       <div className="createNotesDiv">
+        <button className="createNoteBtn" onClick={(e)=>this.addNote(e)}>Create Note</button>
+      </div>
         <div className="divNoteBloc">
         {this.state.notes.map((note, index) => {
           return (
           <div className="notesBloc" key={index}>
               <textarea 
+              className="textArea"
               onChange={(e)=> this.handleChange(e, index)} 
               value={note}
               rows="10"
@@ -31,7 +36,8 @@ class NewNote extends Component {
           </div>);
         })}
       </div>
-      <button onClick={(e)=>this.addNote(e)}>Create Note</button>
+      
+      
     </div>
     );
   }

@@ -1,5 +1,21 @@
 .divNoteBloc {
     display: flex;
+    flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+    padding: 2%;
+}
+
+.createNotesDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.createNoteBtn {}
+
+.createNoteBtn:hover {}
+
+.textArea {
+    background-color: #fff44f;
+    color: black
 }
