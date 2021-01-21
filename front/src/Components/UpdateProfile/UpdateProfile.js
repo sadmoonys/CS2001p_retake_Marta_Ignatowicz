@@ -14,36 +14,29 @@ class UpdateProfile extends Component{
             
             <p class='Box'>
 
-            <label for="Name">Name</label>
+            <label for="Name">Name: *</label>
                             <input class="Update Name:" type="Name" placeholder="Name"/>
             <br></br>
-            <label for="Current School/University">Current School/University</label>
-                            <input class="School/University Name" type="Current School/University" placeholder="Current School/University"/>
+            <label for="Current University">Current Uni: (Optional)</label>
+                            <input class="Enter Name here" type="Current University" placeholder="Current University"/>
             <br></br>
-            <label for="Previous Schools">Previous Schools:</label>
+            <label for="Previous Schools">Previous School: (Optional)</label>
                             <input class="Previous School Name" type="Previous School " placeholder="Previous School"/>
             <br></br>
-            <label for="Current Course">Current Course:</label>
-                            <input class="Current Course Name" type="Current Course" placeholder="Current Course"/>
+            <label for="Current Course">Current Course: (Optional)</label>
+                            <input class="Current Course Name" type="Current Course" placeholder="Current Course"/>  
                             </p>
-            </main>;
-            
-            
-            <div>
-                
-            <button class="Submit">Submit</button>
-                                </div>
 
-                                
+
+                                     
+            </main>   
+           
+            
             
            
 
-
-
-
-
-        
                                 <Footer/>
+                                
         </html> 
         );
     }
