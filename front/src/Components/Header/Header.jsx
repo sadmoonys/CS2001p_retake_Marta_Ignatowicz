@@ -9,7 +9,7 @@ class Header extends Component {
         
            <header class="header">
                     <img src={NWLOGO} alt="" class="image"/>
-                    <ul>
+                    <ul className="options">
                        <Link to="/home">
                             <li><a class="options" href="">HOME</a></li>
                        </Link>
@@ -17,15 +17,12 @@ class Header extends Component {
                        <li><a class="options" href="">SOCIAL</a></li> 
                     </ul>
                     <Link to="/SignIn" class="btn">
-                        <button>SIGN IN</button> 
-                    </Link>
-                                   
+                        <button className="SignButton">SIGN IN</button> 
+                    </Link>                      
            </header> 
         
         );
     }
-    
-  
 }
 
  

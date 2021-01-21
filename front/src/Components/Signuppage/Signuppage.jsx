@@ -18,7 +18,7 @@ class Signuppage extends Component {
             <html>
                 <Header/>
                 <main>
-                <div class="yellowBox">
+                <div class="yellowBoxUP">
                         <p class="signup">Sign Up </p>
                         <form class="logSection">
 

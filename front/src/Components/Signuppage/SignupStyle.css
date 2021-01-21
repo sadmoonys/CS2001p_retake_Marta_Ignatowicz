@@ -4,13 +4,11 @@ main {
     text-align: center;
 }
 
-.yellowBox {
+.yellowBoxUP {
     width: 70%;
     background-color: #fff76a;
     text-align: center;
     max-width: 1200px;
-    border-style: solid;
-    border-color: black;
     margin: 5%;
 }
 
