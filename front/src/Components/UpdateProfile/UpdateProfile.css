@@ -1,11 +1,8 @@
 .H{
-text-align:center;
+    text-align:center;
+    
+    }
 
-
-}
-
-.Submit{
-    margin-right:65px;
-
-
+.Update{
+    height:-200px;
 }

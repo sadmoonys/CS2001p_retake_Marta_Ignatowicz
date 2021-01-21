@@ -6,6 +6,7 @@ import green from"../../Images/green.png"
 import yellow from"../../Images/yellow.png"
 import light_blue from '../../Images/light_blue.png'
 import "./UserprofileStyle.css"
+import {Link} from 'react-router-dom'; 
 
 class Userprofile extends Component {
     render() { 
@@ -18,7 +19,8 @@ class Userprofile extends Component {
             <br></br>
           <p class='side'> 
           <p>  <b>  My profile  </b> </p>
-          <p> Update Profile </p>
+          <Link to="/UpdateProfile" Class="UP"> <p> Update Profile </p></Link>
+        
           
           </p>
             
