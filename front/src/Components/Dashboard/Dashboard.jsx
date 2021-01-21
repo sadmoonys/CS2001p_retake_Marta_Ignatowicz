@@ -48,8 +48,8 @@ class Dashboard extends Component {
                         <input type="text" placeholder="Insert your subject"  ref={(a) => this._inputElement = a}/>
                         <button class="button">Create</button>
                         <div class="top">
-                            <p>name</p>
-                            <p>date</p>
+                            <p>Name</p>
+                            <p>Date</p>
                         </div>
                           <br/>
                           <br/>
