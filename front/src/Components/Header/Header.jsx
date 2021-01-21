@@ -7,7 +7,8 @@ class Header extends Component {
     render() { 
         return ( 
         
-           <header class="header">
+           <header className='mainHeader'>
+               <div class="header">
                     <img src={NWLOGO} alt="" class="image"/>
                     <ul className="options">
                        <Link to="/home">
@@ -18,7 +19,8 @@ class Header extends Component {
                     </ul>
                     <Link to="/SignIn" class="btn">
                         <button className="SignButton">SIGN IN</button> 
-                    </Link>                      
+                    </Link>  
+                </div>                    
            </header> 
         
         );

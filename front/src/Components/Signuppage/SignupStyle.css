@@ -7,6 +7,7 @@ main {
 .yellowBoxUP {
     width: 70%;
     background-color: #fff76a;
+    border-radius: 0.99em;
     text-align: center;
     max-width: 1200px;
     margin: 5%;
@@ -22,6 +23,18 @@ main {
     margin: 0 auto;
     vertical-align: middle;
     width: 40%;
+}
+
+.userBox {
+    display: flex;
+}
+
+.email {
+    display: flex;
+}
+
+.rePassword {
+    display: flex;
 }
 
 label {

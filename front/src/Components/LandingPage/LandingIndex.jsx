@@ -21,7 +21,7 @@ class LandingIndex extends Component {
                         <p class='signUp'>  
                         
                             <Link to="/Signup" class="btn">
-                        <button>SIGN UP HERE </button> 
+                        <button className="singUPbtn">SIGN UP HERE </button> 
                     </Link>
                             <p>JOIN NOTWARE TODAY!</p>
                         </p>

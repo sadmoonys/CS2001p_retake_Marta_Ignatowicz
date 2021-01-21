@@ -40,7 +40,7 @@ class Dashboard extends Component {
         return (  
              <html>
                  <Header/>
-                <form >
+                <form className="Notes">
                     <NewNote/>
                 </form>
                 

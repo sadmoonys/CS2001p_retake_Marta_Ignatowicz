@@ -1,6 +1,16 @@
+    .mainHeader {
+        display: flex;
+        justify-content: center;
+    }
+    
     .header {
         display: flex;
         justify-content: center;
+        text-align: center;
+        width: 70%;
+        border-bottom: 5px solid black;
+        border-radius: 2%;
+        padding: 1.5%;
     }
     
     .header .image {
@@ -53,5 +63,9 @@
     @media screen and (max-width: 760px) {
         li {
             display: block;
+        }
+        .header .image {
+            width: 30%;
+            height: auto;
         }
     }
