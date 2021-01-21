@@ -1,0 +1,59 @@
+main {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.yellowBox {
+    width: 70%;
+    background-color: #fff76a;
+    border-radius: 0.99em;
+    text-align: center;
+    max-width: 1200px;
+    min-width: 350px;
+    margin: 5%;
+}
+
+.logIn {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.logSection {
+    background-color: #FFCE5C;
+    border-radius: 2em;
+    min-width: 300px;
+    margin: 2 auto;
+    vertical-align: middle;
+}
+
+input {
+    display: inline-block;
+    margin: 5%;
+    padding: 10px 15px;
+    width: auto;
+}
+
+label {
+    display: block;
+    margin: 0;
+}
+
+.username {
+    display: flex;
+}
+
+.password {
+    display: flex
+}
+
+.submit {
+    background-color: white;
+    border-radius: 0.99em;
+    transition: 400ms;
+    width: auto;
+}
+
+.submit:hover {
+    transform: scale(1.2) perspective(0.5px);
+}
