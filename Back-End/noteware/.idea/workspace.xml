@@ -65,6 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611616959860</updated>
       <workItem from="1611616960970" duration="1673000" />
+      <workItem from="1611618661556" duration="613000" />
     </task>
     <task id="LOCAL-00001" summary="added dependencies">
       <created>1611617129510</created>
@@ -117,6 +118,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added dependencies" />
