@@ -28,7 +28,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     UserDetailsServiceImpl userDetailsService;
 
-    @Autowired
+//    @Autowired
     private AuthEntryPointJwt unauthorizedHandler;
 
     @Bean
