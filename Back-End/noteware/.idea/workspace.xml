@@ -50,19 +50,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="NotewareApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="noteware" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.group15.noteware.NotewareApplication" />
@@ -81,6 +68,7 @@
       <updated>1611616959860</updated>
       <workItem from="1611616960970" duration="1673000" />
       <workItem from="1611618661556" duration="613000" />
+      <workItem from="1611762444962" duration="1938000" />
     </task>
     <task id="LOCAL-00001" summary="added dependencies">
       <created>1611617129510</created>
