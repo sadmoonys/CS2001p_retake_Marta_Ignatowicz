@@ -3,8 +3,10 @@ import './SubjectsStyle.css'
 import {ReactComponent as Delete} from '../../../Images/delete.svg'
 class SubjectsList extends Component {
     createTasks(item){
-        return <div className="subjects" key={item.key}> 
-        {item.text} <Delete /> </div>
+        return <section className="listSub">
+            <div className="subjects" key={item.key}> 
+        {item.text}  </div> < Delete />
+        </section>  
     }
 
     render() { 

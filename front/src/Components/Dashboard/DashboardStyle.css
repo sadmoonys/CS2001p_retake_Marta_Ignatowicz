@@ -10,13 +10,10 @@ form {
     align-items: center;
     justify-content: space-between;
     width: 80%;
+    max-width: 1000px;
     border-bottom: solid;
     border-color: black;
     font-size: large;
-}
-
-.subjectList {
-    width: 95%;
 }
 
 .Notes {

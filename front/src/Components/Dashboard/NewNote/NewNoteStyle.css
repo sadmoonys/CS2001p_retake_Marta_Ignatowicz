@@ -1,9 +1,7 @@
 .divNoteBloc {
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
     justify-content: center;
-    padding: 2%;
 }
 
 .createNotesDiv {
@@ -17,5 +15,6 @@
 
 .textArea {
     background-color: #fff44f;
-    color: black
+    color: black;
+    margin: 1rem;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./NewNoteStyle.css"
+import {ReactComponent as Delete} from '../../../Images/delete.svg'
 
 class NewNote extends Component {
   state = {
@@ -33,6 +34,7 @@ class NewNote extends Component {
               value={note}
               rows="10"
               cols="30"/>
+              <Delete/>
           </div>);
         })}
       </div>

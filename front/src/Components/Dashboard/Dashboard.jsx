@@ -53,10 +53,9 @@ class Dashboard extends Component {
                         </div>
                           <br/>
                           <br/>
-                        <SubjectsList 
+                            <SubjectsList 
                         entries={this.state.items} />
-                </form>
-                 <Footer/>
+                </form>    
              </html>
 
         );
