@@ -15,7 +15,17 @@ class Dashboard extends Component {
             items: []
         };
         this.addItem = this.addItem.bind(this);
+       
     }
+
+
+    deleteItem(id) {
+        const list= [...this.state.list];
+        const updatedList= list.filter(item => item.id !== id)
+        this.setState( {list: updatedList});
+        
+    }
+
 
     addItem(event){
         if (this._inputElement.value !== ""){
@@ -35,6 +45,10 @@ class Dashboard extends Component {
         console.log(this.state.items);
         event.preventDefault();
     }
+    
+   
+    
+
 
     render() { 
         return (  
@@ -61,5 +75,5 @@ class Dashboard extends Component {
         );
     }
 }
- 
+
 export default Dashboard;
