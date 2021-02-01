@@ -18,28 +18,28 @@ class Signuppage extends Component {
             <html>
                 <Header/>
                 <main>
-                <div class="yellowBoxUP">
-                        <p class="signup">Sign Up </p>
-                        <form class="logSection">
+                <div className="yellowBoxUP">
+                        <p className="signup">Sign Up </p>
+                        <form className="logSection">
 
                         <div className="userBox">
                             <img src={User} alt=""/>
-                            <input class="Enter Name" type="Name" placeholder="Name"/>
+                            <input className="Enter Name" type="Name" placeholder="Name"/>
                         </div>
                         
                         <div className="email">
                             <img src={Email} alt=""/>
-                            <input class="Enter Email" type="Email" placeholder="Email"/>
+                            <input className="Enter Email" type="Email" placeholder="Email"/>
                         </div>
                         
                         <div className="password">
                             <img src={Password} alt=""/>
-                            <input class="password" type="password" placeholder="Password"/>
+                            <input className="password" type="password" placeholder="Password"/>
                         </div>
                         
                         <div className="rePassword">
                             <img src={rePassword} alt=""/>
-                            <input class="Please enter your password agian" type="password" placeholder="re enter password"/>
+                            <input className="Please enter your password agian" type="password" placeholder="re enter password"/>
                         </div>
             
 
@@ -57,7 +57,7 @@ class Signuppage extends Component {
                                 cookiePolicy={'single_host_origin'}
                             />
     
-                        <input class="CREATE AN ACCOUNT" type="submit"/>
+                        <input className="CREATE AN ACCOUNT" type="submit"/>
                 </div>
                 </main>
                 <Footer/>

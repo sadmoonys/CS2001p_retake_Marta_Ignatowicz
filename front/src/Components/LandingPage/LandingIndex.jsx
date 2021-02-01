@@ -15,10 +15,10 @@ class LandingIndex extends Component {
            <html>
             <Header/>
             <main >
-               <div class="firstBox">
-                    <div class="box"> 
-                        <img class="collaboration" src={notes} alt=""/>
-                        <p class='signUp'>  
+               <div className="firstBox">
+                    <div className="box"> 
+                        <img className="collaboration" src={notes} alt=""/>
+                        <p className='signUp'>  
                         
                             <Link to="/Signup" class="btn">
                         <button className="singUPbtn">SIGN UP HERE </button> 
@@ -27,9 +27,9 @@ class LandingIndex extends Component {
                         </p>
                     </div> 
                         
-                    <div class="aboutBox" >
-                        <p class="what">WHAT IS NOTEWARE?</p>
-                        <div class="aboutBox1"> 
+                    <div className="aboutBox" >
+                        <p className="what">WHAT IS NOTEWARE?</p>
+                        <div className="aboutBox1"> 
                             <p> 
                                 NOTEWARE is a notetaking app that aims to address the UN's goal to provide Quality Education for everyone. 
                                 <br></br> 
@@ -45,8 +45,8 @@ class LandingIndex extends Component {
                 </div>
                
                
-                <div class="secondBox">
-                    <div class="benfits"> <b></b>   
+                <div className="secondBox">
+                    <div className="benfits"> <b></b>   
                        <p> BENIFITS OF USING NOTEWARE </p> 
                        <br></br> 
                        <br></br>      
@@ -57,7 +57,7 @@ class LandingIndex extends Component {
                         <p> Votes and Ranks- You can vote what the best notes and resumes. </p>     
                     </div>
 
-                    <img class="screens" src={Screens} alt=""/>     
+                    <img className="screens" src={Screens} alt=""/>     
                 </div>
             
             </main>
