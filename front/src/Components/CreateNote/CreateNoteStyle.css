@@ -1,8 +1,11 @@
-form {
+.noteBody {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+
+.Notes {
+    transition: 900ms;
 }
 
 .top {
@@ -14,8 +17,4 @@ form {
     border-bottom: solid;
     border-color: black;
     font-size: large;
-}
-
-.Notes {
-    padding: 5%;
 }

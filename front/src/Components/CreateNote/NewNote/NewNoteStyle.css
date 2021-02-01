@@ -1,0 +1,21 @@
+.noteArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputTitle {
+    border-radius: 2rem;
+}
+
+.textAreaNote {
+    margin: 0.99rem;
+}
+
+.createNoteBtn {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.99em;
+    transition: 400ms;
+    width: auto;
+}
