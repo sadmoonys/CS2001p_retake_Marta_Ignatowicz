@@ -31,7 +31,8 @@ class UpdateProfile extends Component{
                                      
             </main>   
            
-            
+            <button type="button" class="Submit">Submit</button>
+								
             
            
 
