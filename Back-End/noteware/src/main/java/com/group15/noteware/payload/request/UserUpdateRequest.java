@@ -20,6 +20,16 @@ public class UserUpdateRequest {
         this.currentCourse = currentCourse;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    private String username;
+
     @Size (min = 0, max = 300)
     private String bio;
 
