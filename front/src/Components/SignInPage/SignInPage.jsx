@@ -18,7 +18,6 @@ class SignInPage extends Component {
         }
     }
   
-  
     changeHandler = (e) =>{
           this.setState({[e.target.name]: e.target.value})
     }
@@ -73,7 +72,6 @@ class SignInPage extends Component {
                             <label for="submit"></label>
                             <input className="submit" type="submit"/>
                         </form>
-                        
                 </div>
                 </main>
                 <Footer/>

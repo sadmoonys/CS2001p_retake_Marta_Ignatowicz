@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import Header from '../Header/Header'
 import Footer from "../Footer/Footer"
 import Screens from "../../Images/screens.png"
-import Check from"../../Images/check.png"
-import paper from"../../Images/paper.png"
 import notes from"../../Images/sharenotes.png"
 import {Link} from 'react-router-dom'; 
 import "./LandingStyle.css"
@@ -20,9 +18,9 @@ class LandingIndex extends Component {
                         <img className="collaboration" src={notes} alt=""/>
                         <p className='signUp'>  
                         
-                            <Link to="/Signup" class="btn">
+                         <Link to="/Signup" class="btn">
                         <button className="singUPbtn">SIGN UP HERE </button> 
-                    </Link>
+                         </Link>
                             <p>JOIN NOTWARE TODAY!</p>
                         </p>
                     </div> 
