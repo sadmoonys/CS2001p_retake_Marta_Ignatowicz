@@ -68,6 +68,14 @@ public class User {
         return currentCourse;
     }
 
+    public AuthenticationProvider getAuthProvider() {
+        return authProvider;
+    }
+
+    public void setAuthProvider(AuthenticationProvider authProvider) {
+        this.authProvider = authProvider;
+    }
+
     public void setCurrentCourse(String currentCourse) {
         this.currentCourse = currentCourse;
     }
@@ -94,6 +102,11 @@ public class User {
 
     @Size(max = 50)
     private String currentCourse;
+
+    @Enumerated(EnumType.STRING)
+    @Column(length = 15)
+    private AuthenticationProvider authProvider;
+
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(	name = "user_roles",
