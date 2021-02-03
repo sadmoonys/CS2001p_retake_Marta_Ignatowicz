@@ -32,7 +32,7 @@ class Signuppage extends Component {
       e.preventDefault();
       axios.post('/api/auth/signup', this.state)
       .then(response => {
-         console.log()
+         console.log(response)
      })
      .catch(error =>{
          console.log(error)
