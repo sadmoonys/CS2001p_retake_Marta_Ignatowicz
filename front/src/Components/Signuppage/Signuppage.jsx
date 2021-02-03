@@ -29,11 +29,9 @@ class Signuppage extends Component {
   }
 
   submitHandler = e =>{
-      e.preventDefault(); 
-
-    axios.post('/api/auth/signup/', this.state)
-    const post = axios.post('/api/auth/signup/', this.state)
-     .then(response => {
+      e.preventDefault();
+      axios.post('/api/auth/signup', this.state)
+      .then(response => {
          console.log()
      })
      .catch(error =>{
