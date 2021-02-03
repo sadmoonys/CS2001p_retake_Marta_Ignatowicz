@@ -7,24 +7,24 @@ class UpdateProfile extends Component{
     render() { return(
         <html>
         <Header/>
-        <p class='H'>
+        <p className='H'>
         <h1>Edit your Details</h1>
         </p>
             <main>
             
-            <p class='Box'>
+            <p className='Box'>
 
             <label for="Name">Name: *</label>
-                            <input class="Update Name:" type="Name" placeholder="Name"/>
+                            <input className="Update Name:" type="Name" placeholder="Name"/>
             <br></br>
             <label for="Current University">Current Uni: (Optional)</label>
-                            <input class="Enter Name here" type="Current University" placeholder="Current University"/>
+                            <input className="Enter Name here" type="Current University" placeholder="Current University"/>
             <br></br>
             <label for="Previous Schools">Previous School: (Optional)</label>
-                            <input class="Previous School Name" type="Previous School " placeholder="Previous School"/>
+                            <input className="Previous School Name" type="Previous School " placeholder="Previous School"/>
             <br></br>
             <label for="Current Course">Current Course: (Optional)</label>
-                            <input class="Current Course Name" type="Current Course" placeholder="Current Course"/>  
+                            <input className="Current Course Name" type="Current Course" placeholder="Current Course"/>  
                             </p>
 
 

@@ -1,8 +1,11 @@
-form {
+.noteBody {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+
+.Notes {
+    transition: 900ms;
 }
 
 .top {
@@ -10,15 +13,8 @@ form {
     align-items: center;
     justify-content: space-between;
     width: 80%;
+    max-width: 1000px;
     border-bottom: solid;
     border-color: black;
     font-size: large;
-}
-
-.subjectList {
-    width: 95%;
-}
-
-.Notes {
-    padding: 5%;
 }

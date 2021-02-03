@@ -7,10 +7,10 @@ import User from "../../Images/account_circle-black-18dp.svg"
 import Email from "../../Images/email-24px.svg"
 import Password from "../../Images/done-24px.svg"
 import rePassword from "../../Images/done_all-24px.svg"
+import axios from 'axios'
 
 class Signuppage extends Component {
-<<<<<<< Updated upstream
-=======
+
   
   constructor (props){
       super(props);
@@ -30,7 +30,9 @@ class Signuppage extends Component {
 
   submitHandler = e =>{
       e.preventDefault(); 
+
     axios.post('/api/auth/signup/', this.state)
+    const post = axios.post('/api/auth/signup/', this.state)
      .then(response => {
          console.log()
      })
@@ -40,11 +42,11 @@ class Signuppage extends Component {
      console.log(this.state)
   }
   
->>>>>>> Stashed changes
     render() {
         const responseGoogle = (response) => {
             console.log(response);
           }
+        const {username, email, password, confirmPass} = this.state;
 
         return (  
             <html>
@@ -52,28 +54,56 @@ class Signuppage extends Component {
                 <main>
                 <div class="yellowBoxUP">
                         <p class="signup">Sign Up </p>
-                        <form class="logSection">
+                        <form class="logSection" onSubmit={this.submitHandler}>
 
                         <div className="userBox">
                             <img src={User} alt=""/>
-                            <input class="Enter Name" type="Name" placeholder="Name"/>
+                            <input 
+                            class="Enter Name" 
+                            type="text"
+                            name="username"
+                            placeholder="Name" 
+                            value={username}
+                            onChange={this.changeHandler}
+                            />
                         </div>
                         
                         <div className="email">
                             <img src={Email} alt=""/>
-                            <input class="Enter Email" type="Email" placeholder="Email"/>
+                            <input 
+                            class="Enter Email" 
+                            type="text" 
+                            name="email"
+                            placeholder="Email" 
+                            value={email}
+                            onChange={this.changeHandler}
+                            />
                         </div>
                         
                         <div className="password">
                             <img src={Password} alt=""/>
-                            <input class="password" type="password" placeholder="Password"/>
+                            <input 
+                            class="password" 
+                            type="password" 
+                            name="password"
+                            placeholder="Password" 
+                            value={password}
+                            onChange={this.changeHandler}
+                            />
                         </div>
                         
                         <div className="rePassword">
                             <img src={rePassword} alt=""/>
-                            <input class="Please enter your password agian" type="password" placeholder="re enter password"/>
+                            <input 
+                            class="Please enter your password agian" 
+                            type="password" 
+                            name="confirmPass"
+                            placeholder="re enter password" 
+                            value={confirmPass}
+                            onChange={this.changeHandler}
+                            />
                         </div>
-            
+                        <button class="CREATE AN ACCOUNT" type="submit">Create Account</button>
 
 
                         <label for="submit"></label>
@@ -89,7 +119,7 @@ class Signuppage extends Component {
                                 cookiePolicy={'single_host_origin'}
                             />
     
-                        <input class="CREATE AN ACCOUNT" type="submit"/>
+                        
                 </div>
                 </main>
                 <Footer/>
