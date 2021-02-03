@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d52b2208-9299-4af7-90d5-cf803ce64855" name="Default Changelist" comment="Added bio and current course to the user table.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/group15/noteware/controllers/UserUpdateController.java" afterDir="false" />
+    <list default="true" id="d52b2208-9299-4af7-90d5-cf803ce64855" name="Default Changelist" comment="Removed unnecessary imports">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/group15/noteware/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/group15/noteware/models/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
