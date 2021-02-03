@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d52b2208-9299-4af7-90d5-cf803ce64855" name="Default Changelist" comment="Added bio and current course to the user table.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/group15/noteware/controllers/UserUpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/group15/noteware/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/group15/noteware/models/User.class" afterDir="false" />
-    </list>
+    <list default="true" id="d52b2208-9299-4af7-90d5-cf803ce64855" name="Default Changelist" comment="Added bio and current course to the user table." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,17 +52,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="NotewareApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="noteware" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.group15.noteware.NotewareApplication" />
@@ -87,6 +72,7 @@
       <workItem from="1611618661556" duration="613000" />
       <workItem from="1611762444962" duration="1938000" />
       <workItem from="1612367793724" duration="4911000" />
+      <workItem from="1612377307271" duration="631000" />
     </task>
     <task id="LOCAL-00001" summary="added dependencies">
       <created>1611617129510</created>
