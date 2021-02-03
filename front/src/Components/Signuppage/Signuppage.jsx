@@ -9,6 +9,38 @@ import Password from "../../Images/done-24px.svg"
 import rePassword from "../../Images/done_all-24px.svg"
 
 class Signuppage extends Component {
+<<<<<<< Updated upstream
+=======
+  
+  constructor (props){
+      super(props);
+
+      this.state = {
+        username:'',
+        email:'',
+        password:'',
+        confirmPass:''
+      }
+  }
+
+
+  changeHandler = (e) =>{
+        this.setState({[e.target.name]: e.target.value})
+  }
+
+  submitHandler = e =>{
+      e.preventDefault(); 
+    axios.post('/api/auth/signup/', this.state)
+     .then(response => {
+         console.log()
+     })
+     .catch(error =>{
+         console.log(error)
+     })
+     console.log(this.state)
+  }
+  
+>>>>>>> Stashed changes
     render() {
         const responseGoogle = (response) => {
             console.log(response);
