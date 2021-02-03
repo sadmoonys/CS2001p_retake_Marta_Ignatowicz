@@ -12,9 +12,9 @@ class SignInPage extends Component {
             <html>
                 <Header/>
                 <main>
-                <div class="yellowBox">
-                        <p class="logIn">Log in</p>
-                        <form class="logSection">
+                <div className="yellowBox">
+                        <p className="logIn">Log in</p>
+                        <form className="logSection">
                            
                            <div className="username">
                                <img src={User}></img>
@@ -25,12 +25,12 @@ class SignInPage extends Component {
                            <div className='password'>
                                <label for="c"></label>
                                <img src={Password} alt=""/>
-                               <input class="password" type="password" placeholder="Password"/>
+                               <input className="password" type="password" placeholder="Password"/>
                            </div>
 
                             <label for="submit"></label>
                         </form>
-                        <input class="submit" type="submit"/>
+                        <input className="submit" type="submit"/>
                 </div>
                 </main>
                 <Footer/>
