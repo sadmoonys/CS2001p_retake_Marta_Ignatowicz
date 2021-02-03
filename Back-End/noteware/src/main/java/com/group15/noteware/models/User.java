@@ -56,6 +56,22 @@ public class User {
         this.roles = roles;
     }
 
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    public String getCurrentCourse() {
+        return currentCourse;
+    }
+
+    public void setCurrentCourse(String currentCourse) {
+        this.currentCourse = currentCourse;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -72,6 +88,12 @@ public class User {
     @NotBlank
     @Size(max = 120)
     private String password;
+
+    @Size(max = 300)
+    private String bio;
+
+    @Size(max = 50)
+    private String currentCourse;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(	name = "user_roles",
