@@ -5,7 +5,7 @@ class Footer extends Component {
     render() { 
         return (
             <footer>
-                <div class="power">
+                <div className="power">
                     Powered by Group 15
                 </div>
             </footer>

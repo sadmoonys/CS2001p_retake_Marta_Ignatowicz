@@ -8,16 +8,16 @@ class Header extends Component {
         return ( 
         
            <header className='mainHeader'>
-               <div class="header">
-                    <img src={NWLOGO} alt="" class="image"/>
+               <div className="header">
+                    <img src={NWLOGO} alt="" className="image"/>
                     <ul className="options">
                        <Link to="/home">
-                            <li><a class="options" href="">HOME</a></li>
+                            <li><a className="options" href="">HOME</a></li>
                        </Link>
-                       <li><a class="options" href="">DISCOVERY</a></li> 
-                       <li><a class="options" href="">SOCIAL</a></li> 
+                       <li><a className="options" href="">DISCOVERY</a></li> 
+                       <li><a className="options" href="">SOCIAL</a></li> 
                     </ul>
-                    <Link to="/SignIn" class="btn">
+                    <Link to="/SignIn" className="btn">
                         <button className="SignButton">SIGN IN</button> 
                     </Link>  
                 </div>                    
