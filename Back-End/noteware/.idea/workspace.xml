@@ -52,6 +52,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NotewareApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="noteware" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.group15.noteware.NotewareApplication" />
