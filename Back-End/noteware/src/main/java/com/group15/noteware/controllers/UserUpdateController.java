@@ -31,13 +31,4 @@ public class UserUpdateController {
         return ResponseEntity.ok(new MessageResponse("User updated successfully"));
     }
 
-    @Transactional
-    public Optional<User> update(String username, User user){
-        return userRepository.findByUsername(username).map(target ->{
-            target.setBio("hello");
-            target.setCurrentCourse("cs");
-            return target;
-        });
-    }
-
 }
