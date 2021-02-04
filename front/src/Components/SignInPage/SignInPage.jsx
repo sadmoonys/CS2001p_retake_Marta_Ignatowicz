@@ -26,8 +26,13 @@ class SignInPage extends Component {
         e.preventDefault();
         axios.post('/api/auth/signin', this.state)
         .then(response => {
-           console.log(response)
+            const resp = JSON.stringify(response)
+            const resp2  = JSON.parse(resp)
+            if(resp2.status == 200){
+                this.props.history.push('/CreateNote')
+            }
        })
+
        .catch(error =>{
            console.log(error)
        })

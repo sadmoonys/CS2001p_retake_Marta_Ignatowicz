@@ -11,7 +11,6 @@ function App() {
     return ( 
         <Router>
             <Switch>
-                
                 <Route path="/SignIn" component={SignIn}/>
                 <Route path="/Signup" component={Signup}/>
                 <Route path="/CreateNote" component={CreateNote}/>
