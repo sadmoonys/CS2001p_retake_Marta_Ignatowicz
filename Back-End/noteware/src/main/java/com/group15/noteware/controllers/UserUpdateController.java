@@ -22,6 +22,7 @@ public class UserUpdateController {
         userRepository.findByUsername(userUpdateRequest.getUsername()).map(target ->{
             target.setBio(userUpdateRequest.getBio());
             target.setCurrentCourse(userUpdateRequest.getCurrentCourse());
+            userRepository.save(target);
             return target;
         });
 
