@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import Header from '../Header/Header'
+import NWLOGO from '../../Images/NWLOGO.png'
 import NewNote from './NewNote/NewNote'
 import ListOfNotes from './ListOfNotes/ListOfNotes'
 import './CreateNoteStyle.css'
 import auth from '../../Auth';
+import {Link} from 'react-router-dom'; 
 
 class Dashboard extends Component {
     constructor(){
@@ -31,7 +32,31 @@ class Dashboard extends Component {
     render() { 
         return (  
              <html>
-                <Header/>
+               <header className="classHeader">
+               <div className="header">
+                    <img src={NWLOGO} alt="" className="image"/>
+                    <ul className="options">
+                       <Link to="/">
+                            <li><a className="options" href="">HOME</a></li>
+                       </Link>
+                       <li><a className="options" href="">DISCOVERY</a></li> 
+                       <li><a className="options" href="">SOCIAL</a></li> 
+                    </ul>
+                   <div className="profLog">
+                      <Link to="/UserProfile" >
+                       <p>User Profile</p>
+                    </Link>  
+                    <Link>
+                        <p onClick={()=> {
+                        auth.logout(()=>{
+                            this.props.history.push('/')
+                        })
+                    }}>Log Out</p>
+                    </Link>  
+                   </div>
+                    
+                </div>            
+               </header>
                 <section className="noteBody">
                     <NewNote  className="Notes" createNote={this.createNote.bind(this)}/>
                     <ListOfNotes 
@@ -42,11 +67,6 @@ class Dashboard extends Component {
                             <p>Date</p>
                         </div>
                 </section>
-                <button onClick={()=> {
-                    auth.logout(()=>{
-                        this.props.history.push('/')
-                    })
-                }}>Log Out</button>
              </html>
 
         );
