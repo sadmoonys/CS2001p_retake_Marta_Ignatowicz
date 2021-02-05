@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Header from '../Header/Header'
 import NewNote from './NewNote/NewNote'
 import ListOfNotes from './ListOfNotes/ListOfNotes'
-
 import './CreateNoteStyle.css'
+import auth from '../../Auth';
 
 class Dashboard extends Component {
     constructor(){
@@ -42,7 +42,11 @@ class Dashboard extends Component {
                             <p>Date</p>
                         </div>
                 </section>
-                
+                <button onClick={()=> {
+                    auth.logout(()=>{
+                        this.props.history.push('/')
+                    })
+                }}>Log Out</button>
              </html>
 
         );

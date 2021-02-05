@@ -6,17 +6,19 @@ import CreateNote from './Components/CreateNote/CreateNote'
 import UserProfile from './Components/Userprofile/Userprofile'
 import UpdateProfile from './Components/UpdateProfile/UpdateProfile'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import ProtectedRoute from './ProtectedRoute'
 
 function App() {
     return ( 
         <Router>
             <Switch>
-                <Route path="/SignIn" component={SignIn}/>
-                <Route path="/Signup" component={Signup}/>
-                <Route path="/CreateNote" component={CreateNote}/>
-                <Route path="/UserProfile" component={UserProfile}/>
-                <Route path="/UpdateProfile" component={UpdateProfile}/>
-                <Route path="/" component={LandingIndex}/>
+                <Route exact path="/SignIn" component={SignIn}/>
+                <Route exact path="/Signup" component={Signup}/>
+                <ProtectedRoute exact path="/CreateNote" component={CreateNote}/>
+                <ProtectedRoute exact path="/UserProfile" component={UserProfile}/>
+                <ProtectedRoute exact path="/UpdateProfile" component={UpdateProfile}/>
+                <Route exact exact path="/" component={LandingIndex}/>
+                <Route path="*" component={() => "404 NOT FOUND"}/>
             </Switch>
         </Router>
     );

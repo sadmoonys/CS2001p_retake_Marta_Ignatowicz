@@ -5,6 +5,7 @@ import "./SignInStyle.css"
 import User from '../../Images/account_circle-black-18dp.svg'
 import Password from '../../Images/vpn_key-24px.svg'
 import axios from 'axios'
+import auth from '../../Auth'
 
 
 class SignInPage extends Component {
@@ -25,14 +26,12 @@ class SignInPage extends Component {
     submitHandler = e =>{
         e.preventDefault();
         axios.post('/api/auth/signin', this.state)
-        .then(response => {
-            const resp = JSON.stringify(response)
-            const resp2  = JSON.parse(resp)
-            if(resp2.status == 200){
+        .then( response =>{
+            if(auth.login(response) == true){
                 this.props.history.push('/CreateNote')
             }
-       })
-
+            
+        })   
        .catch(error =>{
            console.log(error)
        })
