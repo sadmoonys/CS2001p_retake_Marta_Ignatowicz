@@ -27,7 +27,7 @@ class UpdateProfile extends Component{
                             <input className="Current Course Name" type="Current Course" placeholder="Current Course"/>  
                             </p>
 
-
+                            <button class="Updateprofile" type="submit">Update Profile</button>
                                      
             </main>   
            
