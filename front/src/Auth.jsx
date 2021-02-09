@@ -1,24 +1,32 @@
 class Auth {
-    constructor(props){
+    constructor(props) {
         this.authenticated = false;
+    }
+
+    token;
+
+    authBearer(data) {
+        const resp = JSON.stringify(data)
+        const resp2 = JSON.parse(resp)
+        this.token = resp2.accessToken
+        return this.token
     }
 
     login(response) {
         const resp = JSON.stringify(response)
-        const resp2  = JSON.parse(resp)
-        console.log('im here')
-        if(resp2.status == 200){
+        const resp2 = JSON.parse(resp)
+        if (resp2.status == 200) {
             return this.authenticated = true;
         }
     }
-    
 
-    logout(cb){
+
+    logout(cb) {
         this.authenticated = false;
         cb();
     }
 
-    isAuthenticated(){
+    isAuthenticated() {
         return this.authenticated;
     }
 }

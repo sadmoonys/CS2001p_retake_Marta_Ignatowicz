@@ -25,8 +25,11 @@ class SignInPage extends Component {
   
     submitHandler = e =>{
         e.preventDefault();
-        axios.post('/api/auth/signin', this.state)
+
+        
+        axios.post('http://localhost:8080/api/auth/signin', this.state)
         .then( response =>{
+            auth.authBearer(response.data)
             if(auth.login(response) == true){
                 this.props.history.push('/CreateNote')
             }

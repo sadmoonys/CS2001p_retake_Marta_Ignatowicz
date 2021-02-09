@@ -30,7 +30,7 @@ class Signuppage extends Component {
 
   submitHandler = e =>{
       e.preventDefault();
-      axios.post('/api/auth/signup', this.state)
+      axios.post('http://localhost:8080/api/auth/signup', this.state)
       .then(response => {
          console.log(response)
      })

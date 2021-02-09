@@ -3,6 +3,7 @@ import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import "./UpdateProfile.css"
 import axios from 'axios';
+import Auth from '../../Auth';
 
 class UpdateProfile extends Component{
     constructor(props){
@@ -10,9 +11,10 @@ class UpdateProfile extends Component{
 
 
         this.state = {
-            username:'',
             bio:'',
-            current_course: '',
+            currentCourse: '', 
+            username:'',
+            
         }
     }
     
@@ -22,8 +24,12 @@ class UpdateProfile extends Component{
 
     submitHandler = e => {
         e.preventDefault()
-        console.log(this.state)
-        axios.post('/api/userupdate/updateprofile', this.state)
+        console.log(this.state)        
+        const config = {
+            headers: { Authorization: `Bearer ${Auth.token}` }
+        };
+        
+        axios.post('http://localhost:8080/api/userupdate/updateprofile',this.state, config)
         .then(response =>{
             console.log(response)
         }).catch(error=>{
@@ -32,7 +38,7 @@ class UpdateProfile extends Component{
     }
     
     render() { 
-        const {username, bio, current_course} = this.state
+        const {username, bio, currentCourse} = this.state
         return(
         <html>
         <Header/>
@@ -67,8 +73,8 @@ class UpdateProfile extends Component{
                 <input 
                 className="CourseOptional" 
                 type="text"
-                name="current_course" 
-                value={current_course}
+                name="currentCourse" 
+                value={currentCourse}
                 onChange={this.handleChange}
                 placeholder="Previous School"/>
                 
