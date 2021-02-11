@@ -2,6 +2,7 @@ package com.group15.noteware.security;
 
 import com.group15.noteware.security.jwt.AuthEntryPointJwt;
 import com.group15.noteware.security.jwt.AuthTokenFilter;
+import com.group15.noteware.security.oauth.CustomOAuth2UserService;
 import com.group15.noteware.security.services.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -49,11 +50,25 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
+
         return new BCryptPasswordEncoder();
     }
+  //Here is a bean i made
+    @Bean
+    public CustomOAuth2UserService oAuth2UserService(){
+        return oAuth2UserService;
+    }
+    //delete this if it causes problems
+
+    @Autowired
+    private CustomOAuth2UserService oAuth2UserService;
+    //the CustomOAuth2UserService bean was made because line 63-64 was throwing an error that there was no beans
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+                .antMatchers("/oauth2**");
+        //I added this authorize Requests bit in, it was throwing a lot of problems
         http.cors().and().csrf().disable()
                 .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
@@ -63,6 +78,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     }
-
 
 }

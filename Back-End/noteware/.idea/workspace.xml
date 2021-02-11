@@ -59,17 +59,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="NotewareApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="noteware" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.group15.noteware.NotewareApplication" />
@@ -97,6 +86,9 @@
       <workItem from="1612718585626" duration="2254000" />
       <workItem from="1612728938806" duration="514000" />
       <workItem from="1612780778814" duration="2972000" />
+      <workItem from="1612826029039" duration="597000" />
+      <workItem from="1612868458355" duration="1435000" />
+      <workItem from="1612950385609" duration="3087000" />
     </task>
     <task id="LOCAL-00001" summary="added dependencies">
       <created>1611617129510</created>
