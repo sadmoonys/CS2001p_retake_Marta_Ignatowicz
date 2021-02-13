@@ -1,7 +1,7 @@
-.H{
-    text-align:center;
-    
-    }
+.H {
+    text-align: center;
+}
+
 
 .Update{
     height:-200px;
@@ -13,4 +13,8 @@
     transition: 400ms;
     width: auto;
     height:20px;
+
+.Update {
+    height: -200px;
+
 }

@@ -10,6 +10,7 @@ import rePassword from "../../Images/done_all-24px.svg"
 import axios from 'axios'
 
 class Signuppage extends Component {
+
   
   constructor (props){
       super(props);
@@ -28,10 +29,10 @@ class Signuppage extends Component {
   }
 
   submitHandler = e =>{
-      e.preventDefault(); 
-     const post = axios.post('/api/auth/signup/', this.state)
-     .then(response => {
-         console.log()
+      e.preventDefault();
+      axios.post('http://localhost:8080/api/auth/signup', this.state)
+      .then(response => {
+         console.log(response)
      })
      .catch(error =>{
          console.log(error)

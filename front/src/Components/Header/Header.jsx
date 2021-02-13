@@ -11,7 +11,7 @@ class Header extends Component {
                <div className="header">
                     <img src={NWLOGO} alt="" className="image"/>
                     <ul className="options">
-                       <Link to="/home">
+                       <Link to="/">
                             <li><a className="options" href="">HOME</a></li>
                        </Link>
                        <li><a className="options" href="">DISCOVERY</a></li> 

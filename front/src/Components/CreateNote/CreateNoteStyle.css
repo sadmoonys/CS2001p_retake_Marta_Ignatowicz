@@ -1,3 +1,13 @@
+.classHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.profLog {
+    display: flex;
+    flex-direction: column;
+}
+
 .noteBody {
     display: flex;
     flex-direction: column;
