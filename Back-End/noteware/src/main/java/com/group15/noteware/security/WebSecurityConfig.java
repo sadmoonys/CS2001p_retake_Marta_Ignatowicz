@@ -54,21 +54,38 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
   //Here is a bean i made
-    @Bean
-    public CustomOAuth2UserService oAuth2UserService(){
-        return oAuth2UserService;
-    }
+/*  @Bean
+  public CustomOAuth2UserService oAuth2UserService(){
+      return oAuth2UserService;
+  }*/
     //delete this if it causes problems
 
-    @Autowired
-    private CustomOAuth2UserService oAuth2UserService;
-    //the CustomOAuth2UserService bean was made because line 63-64 was throwing an error that there was no beans
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .antMatchers("/oauth2**");
-        //I added this authorize Requests bit in, it was throwing a lot of problems
+  /*      http.authorizeRequests()
+                //v  for this, check the .html class for the google oauth 2 button url
+                .antMatchers("/oauth2/**").permitAll()
+                .antMatchers(("/user/**")).authenticated()
+                .anyRequest().permitAll()
+                .and()
+                .formLogin()
+                    .loginPage("/login")
+                    .usernameParameter("email")
+                    .permitAll()
+                    .defaultSuccessUrl("/")
+                .and()
+                .oauth2Login()
+                    .loginPage("/login")
+                    .userInfoEndpoint().userService(oAuth2UserService)
+                    .and()
+                .and()
+                .logout().permitAll()
+                .and()
+      //          .rememberMe().tokenRepository();  //there's supposed to be a persistentTokenRepository() here
+;
+*/
+
         http.cors().and().csrf().disable()
                 .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
@@ -78,5 +95,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     }
-
+/*
+    @Autowired
+    private CustomOAuth2UserService oAuth2UserService;
+    //the CustomOAuth2UserService bean was made because line 63-64 was throwing an error that there was no beans
+*/
 }
