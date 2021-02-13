@@ -6,11 +6,11 @@ import './CreateNoteStyle.css'
 import auth from '../../Auth';
 import {Link} from 'react-router-dom'; 
 
-class Dashboard extends Component {
+class CreateNote extends Component {
     constructor(){
         super();
         this.state =  {
-            notes: []
+            notes: [],
         }
     }
 
@@ -28,7 +28,9 @@ class Dashboard extends Component {
         arrayNotes.splice(index,1);
         this.setState({nota:arrayNotes})
     }
-       
+
+    
+      
     render() { 
         return (  
              <html>
@@ -59,13 +61,12 @@ class Dashboard extends Component {
                </header>
                 <section className="noteBody">
                     <NewNote  className="Notes" createNote={this.createNote.bind(this)}/>
+                    <div class="top">
+                            <p>Notes on this folder</p>
+                        </div>
                     <ListOfNotes 
                     deleteNote={this.deleteNote.bind(this)}
                     notes={this.state.notes}/>
-                    <div class="top">
-                            <p>Name</p>
-                            <p>Date</p>
-                        </div>
                 </section>
              </html>
 
@@ -73,4 +74,4 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard;
+export default CreateNote;

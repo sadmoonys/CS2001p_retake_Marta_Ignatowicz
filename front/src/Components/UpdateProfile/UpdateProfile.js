@@ -84,10 +84,21 @@ class UpdateProfile extends Component{
                 <button type="submit"> Submit </button> 
             </form>
 
-
+                            <button class="Updateprofile" type="submit">Update Profile</button>
                                      
             </main>   
+
+           
+            <button type="button" class="Submit">Submit</button>
+								
+            
+           
+
+               <Footer/>
+                                
+
             <Footer/>                     
+
         </html> 
         );
     }

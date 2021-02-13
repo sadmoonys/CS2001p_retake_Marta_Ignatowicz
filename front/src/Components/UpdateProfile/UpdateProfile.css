@@ -2,6 +2,19 @@
     text-align: center;
 }
 
+
+.Update{
+    height:-200px;
+}
+
+.Updateprofile {
+    background-color: white;
+    border-radius: 0.99em;
+    transition: 400ms;
+    width: auto;
+    height:20px;
+
 .Update {
     height: -200px;
+
 }
