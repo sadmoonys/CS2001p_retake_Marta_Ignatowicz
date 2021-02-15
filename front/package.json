@@ -38,9 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
 
-    "name": "front",
+    "name": "front", 
     "version": "0.1.0",
     "private": true,
     "dependencies": {
