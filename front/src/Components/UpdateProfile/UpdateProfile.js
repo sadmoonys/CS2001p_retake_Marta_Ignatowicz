@@ -94,7 +94,6 @@ class UpdateProfile extends Component{
             
            
 
-               <Footer/>
                                 
 
             <Footer/>                     

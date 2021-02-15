@@ -11,7 +11,6 @@ class NoteCard extends Component {
     super(props)
     this.titlee = React.createRef( )
     this.text = React.createRef()
-
   }
 
   state = {
@@ -46,6 +45,7 @@ class NoteCard extends Component {
       </section> 
       :
       <section className="insideNote">
+        <h4>{this.props.category}</h4>
         <header>
           <h3>{this.state.title}</h3>
         </header>

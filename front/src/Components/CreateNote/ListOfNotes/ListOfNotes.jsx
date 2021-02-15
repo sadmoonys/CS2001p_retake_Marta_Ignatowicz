@@ -15,7 +15,9 @@ class ListOfNotes extends Component {
               deleteNote={this.props.deleteNote}
               editNote={this.props.editNote}
               title={note.title} 
-              text={note.text}/>
+              text={note.text}
+              category={note.category}
+              />
             </li>
           );
         })}

@@ -14,9 +14,9 @@ function App() {
             <Switch>
                 <Route exact path="/SignIn" component={SignIn}/>
                 <Route exact path="/Signup" component={Signup}/>
-                <ProtectedRoute exact path="/CreateNote" component={CreateNote}/>
-                <ProtectedRoute exact path="/UserProfile" component={UserProfile}/>
-                <ProtectedRoute exact path="/UpdateProfile" component={UpdateProfile}/>
+                <Route exact path="/CreateNote" component={CreateNote}/>
+                <Route exact path="/UserProfile" component={UserProfile}/>
+                <Route exact path="/UpdateProfile" component={UpdateProfile}/>
                 <Route exact exact path="/" component={LandingIndex}/>
                 <Route path="*" component={() => "404 NOT FOUND"}/>
             </Switch>

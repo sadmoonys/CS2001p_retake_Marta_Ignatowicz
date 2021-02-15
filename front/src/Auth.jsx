@@ -2,7 +2,6 @@ class Auth {
     constructor(props) {
         this.authenticated = false;
     }
-
     token;
 
     authBearer(data) {
