@@ -12,7 +12,7 @@ class CreateNote extends Component {
         super();
         this.state = {
             notes: [],
-            categories: []
+           
         }
     }
 
@@ -24,13 +24,7 @@ class CreateNote extends Component {
         }
         this.setState(newState)
     }
-
-
-    addCategories(nameCategory){
-        const newArrayCategory = [...this.state.categories, nameCategory]
-        const newState= {...this.state, categories: newArrayCategory}
-        this.setState(newState)
-    }
+    
 
     deleteNote(index) {
         let arrayNotes = this.state.notes;
@@ -77,10 +71,6 @@ class CreateNote extends Component {
                         <p>Notes on this folder</p>
                     </div>
                     <main>
-                        <ListOfCatefories
-                            addCategories={this.addCategories.bind(this)}
-                            categories={this.state.categories}
-                        />
                         <ListOfNotes
                         deleteNote={this.deleteNote.bind(this)}
                         notes={this.state.notes} />

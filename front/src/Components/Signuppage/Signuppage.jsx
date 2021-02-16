@@ -115,9 +115,7 @@ class Signuppage extends Component {
                                 onSuccess={responseGoogle}
                                 onFailure={responseGoogle}
                                 cookiePolicy={'single_host_origin'}
-                            />
-    
-                        
+                            />                    
                 </div>
                 </main>
                 <Footer/>

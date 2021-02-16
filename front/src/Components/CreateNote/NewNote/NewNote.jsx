@@ -8,11 +8,7 @@ class NewNote extends Component {
     this.note = "";
   }
 
-  handleChangeCategory(e){
-    e.stopPropagation();
-    this.category = e.target.value;
-  }
-
+  
   handleChangeTitle(e) {
     e.stopPropagation();
     this.title = e.target.value;
@@ -34,14 +30,7 @@ class NewNote extends Component {
       <form className="noteArea"
         onSubmit={this.createNote.bind(this)}>
 
-        <select onChange={this.handleChangeCategory.bind(this)}>
-          <option >Sem Categoria</option>
-          {this.props.categories.map((category => {
-              return <option>{category}</option>
-            }))
-          }
-        </select>
-
+       
         <input
           className="inputTitle"
           type="text"
