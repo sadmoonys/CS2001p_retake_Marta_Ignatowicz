@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import NWLOGO from '../../Images/NWLOGO.png'
 import NewNote from './NewNote/NewNote'
 import ListOfNotes from './ListOfNotes/ListOfNotes'
-import ListOfCatefories from './ListOfCategories/ListOfCategories'
 import './CreateNoteStyle.css'
 import auth from '../../Auth';
 import { Link } from 'react-router-dom';

@@ -1,31 +1,31 @@
 import React, { Component } from 'react';
 import NWLOGO from '../../Images/NWLOGO.png'
 import './style.css'
-import {Link} from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
-    render() { 
-        return ( 
-        
-           <header className='mainHeader'>
-               <div className="header">
-                    <img src={NWLOGO} alt="" className="image"/>
-                    <ul className="options">
-                       <Link to="/">
-                            <li><a className="options" href="">HOME</a></li>
-                       </Link>
-                       <li><a className="options" href="">DISCOVERY</a></li> 
-                       <li><a className="options" href="">SOCIAL</a></li> 
-                    </ul>
-                    <Link to="/SignIn" className="btn">
-                        <button className="SignButton">SIGN IN</button> 
-                    </Link>  
-                </div>                    
-           </header> 
-        
+    render() {
+        return (
+
+            <header className='mainHeader'>
+                <img src={NWLOGO} alt="" className="image" />
+
+                <Link className="optionHome"style={{ textDecoration: 'none' }} to="/">
+                    <nav>HOME</nav>
+                </Link>
+                <nav className="options">DISCOVERY</nav>
+                <nav className="options" href="">SOCIAL</nav>
+                <nav className="options">CONTACT</nav>
+
+                <Link style={{ textDecoration: 'none' }} to="/SignIn" className="SignButton">
+                <img src={NWLOGO} alt="" className="image-singIn" />
+                    Sign in
+                </Link>
+            </header>
+
         );
     }
 }
 
- 
+
 export default Header;
