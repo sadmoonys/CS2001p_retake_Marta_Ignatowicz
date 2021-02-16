@@ -2,9 +2,8 @@
     text-align: center;
 }
 
-
-.Update{
-    height:-200px;
+.Update {
+    height: -200px;
 }
 
 .Updateprofile {
@@ -12,9 +11,9 @@
     border-radius: 0.99em;
     transition: 400ms;
     width: auto;
-    height:20px;
+    height: 20px;
+}
 
 .Update {
     height: -200px;
-
 }

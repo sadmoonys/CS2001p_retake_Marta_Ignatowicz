@@ -43,7 +43,7 @@ class Userprofile extends Component {
                         </div>
                         <Link to="/UpdateProfile" Class="UP"> <p> Update Profile </p></Link>
                     </div>
-                    <div className='profiledetails'>
+                    <div className='profdet'>
                         <p>Name : </p>
                         <br/>
                         <p>  Current school/university :</p>
