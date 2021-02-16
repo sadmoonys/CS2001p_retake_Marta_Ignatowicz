@@ -4,47 +4,43 @@ import React, { useState } from "react";
 
 
 
-    const SearchBox = () => {
-        const [input, setInput] = useState("");
-        let folders = [
+ class SearchBox extends React.Component{
+     state = {
+         names: [
+'Maths',
+'Computer Science',
+'English',
+'History',
+        
+         ],
+         searchTerm: ''
+     }
 
-            { name: "computer science"},
-            { name: "Maths"},
-            { name: "English"},
-            
-        ];
+     editSearchTerm =(e) => {
+         this.setState({searchTerm: e.target.value})
+     }
 
-        const handleChange = (e) => {
-            e.preventDefault();
-            setInput(e.target.value);}
-
-
-            if (input.length > 0 ) {
-                folders =folders.filter((i) => {
-return i.name.match(input);
-                })
-            }
-
-
-
-
-        return (
-
-<div className="">
+     dynamicSearch = () => {
+         return this.state.names.filter(name => name.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
+     }
+     
+     render() {
+         return (
+            <div className="">
                         
-                            <input  
-                            type="text"
-                            name="username"
-                            placeholder="Search for Folder here" 
-                            value={input}
-                            onChange={handleChange}
-                            />
-                        </div>
-          
+            <input 
+            type="text"
+            names ={this.dynamicSearch()} 
+            value= {this.state.searchTerm}
+            placeholder="Search for Folder here" 
+            onChange={this.editSearchTerm}
 
-            
-      
+            />
 
-        )};
+        </div>
+
+         )
+     }
+ }
         
     export default SearchBox;
