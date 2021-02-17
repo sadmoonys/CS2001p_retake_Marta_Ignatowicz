@@ -1,17 +1,20 @@
-.classHeader {
-    display: flex;
-    justify-content: center;
-}
-
-.profLog {
-    display: flex;
-    flex-direction: column;
-}
-
 .noteBody {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+}
+
+.FolderDiv {
+    width: 100%;
+    padding-left: 3rem;
+    padding-bottom: 1rem;
+    color: white;
+    border-bottom: solid #58ACDB;
+    font-size: xx-large;
+    margin: 2rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    max-width: 1000px;
 }
 
 .Notes {
@@ -27,4 +30,23 @@
     border-bottom: solid;
     border-color: black;
     font-size: large;
+}
+
+.returnFolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1rem;
+    background-color: #656C76;
+}
+
+.btnBlue {
+    padding: 0.3rem;
+    margin: 0.3rem;
+    border-radius: 1rem;
+    background-color: #58ACDB;
 }

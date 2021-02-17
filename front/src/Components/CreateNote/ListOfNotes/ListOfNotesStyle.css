@@ -5,8 +5,8 @@
 }
 
 .notesAlone {
-    padding: 1%;
     margin: 1%;
+    border-radius: 0.7rem;
     background-color: #58ACDB;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0.2rem 0.3rem 0.3rem black;
 }

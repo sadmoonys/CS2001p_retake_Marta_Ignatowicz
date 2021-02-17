@@ -30,10 +30,10 @@ class NewNote extends Component {
       <form className="noteArea"
         onSubmit={this.createNote.bind(this)}>
 
-       
-        <input
+        <textarea
           className="inputTitle"
           type="text"
+          id="" cols="60" rows="1"
           placeholder="Title"
           onChange={this.handleChangeTitle.bind(this)} />
 
@@ -41,10 +41,10 @@ class NewNote extends Component {
           className="textAreaNote"
           name=""
           placeholder="Write your note..."
-          id="" cols="60" rows="15"
+          id="" cols="60" rows="10"
           onChange={this.handleChangeNote.bind(this)} />
 
-        <button className="createNoteBtn">Create note</button>
+        <button className="createNoteBtn">Save</button>
       </form>
     );
   }

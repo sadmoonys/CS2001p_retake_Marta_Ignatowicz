@@ -9,7 +9,7 @@ class ListOfNotes extends Component {
       <ul className="NotesArea">
         {this.props.notes.map((note, index) => {
           return (
-            <li className="notesAlone" key={index}>
+            <div className="notesAlone" key={index}>
               <NoteCard 
               indice = {index}
               deleteNote={this.props.deleteNote}
@@ -18,7 +18,7 @@ class ListOfNotes extends Component {
               text={note.text}
               category={note.category}
               />
-            </li>
+            </div>
           );
         })}
       </ul>
