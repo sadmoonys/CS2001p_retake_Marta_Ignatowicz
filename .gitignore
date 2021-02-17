@@ -12,6 +12,7 @@
 
 # misc
 /front/.DS_Store
+/Back-End/.DS_Store
 /front/.env.local
 /front/.env.development.local
 /front/.env.test.local
@@ -29,3 +30,10 @@
 
 #.idea
 /front/.idea
+/Back-End/noteware/.idea
+/Back-End/noteware/*.iws
+/Back-End/noteware/*.iml
+/Back-End/noteware/*.ipr
+
+#other
+/Back-End/noteware/target/
