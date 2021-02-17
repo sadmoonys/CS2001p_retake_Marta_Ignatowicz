@@ -10,18 +10,6 @@
         max-width: 200px;
     }
     
-    .optionHome {
-        box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #393939;
-        padding-bottom: 0.5rem;
-        padding-top: 0.5rem;
-        padding-left: 1.5rem;
-        padding-right: 2rem;
-        text-decoration: none;
-        background-color: #58ACDB;
-        color: #FFFFFF;
-        font-size: x-large;
-    }
-    
     .options {
         box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem #393939;
         padding-bottom: 0.5rem;
@@ -34,7 +22,7 @@
     }
     
     .options:hover {
-        color: #58ACDB;
+        background-color: #58ACDB;
     }
     
     .SignButton {
@@ -62,10 +50,39 @@
         background-color: #00A4FF;
     }
     
+    .profLog {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+        margin: 1rem;
+    }
+    
+    .logOutBtn {
+        width: fit-content;
+        padding: 0.5rem;
+        margin: 0.3rem;
+        transition: transform .6s;
+        background-color: #58ACDB;
+        color: #FFFFFF;
+    }
+    
+    .logOutBtn:hover {
+        transform: scale(0.8);
+    }
+    
+    .myProfileBtn {
+        padding: 0.5rem;
+        width: fit-content;
+        transition: transform .6s;
+        background-color: #58ACDB;
+        color: #FFFFFF;
+    }
+    
+    .myProfileBtn:hover {
+        transform: scale(0.8);
+    }
+    
     @media screen and (max-width: 760px) {
-        li {
-            display: block;
-        }
         .header .image {
             width: 30%;
             height: auto;
