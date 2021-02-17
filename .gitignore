@@ -29,6 +29,7 @@
 /front/package-lock.json
 
 #.idea
+.idea
 /front/.idea
 /Back-End/noteware/.idea
 /Back-End/noteware/*.iws
