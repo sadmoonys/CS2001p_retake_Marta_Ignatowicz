@@ -31,3 +31,22 @@
     border-color: black;
     font-size: large;
 }
+
+.returnFolder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 1rem;
+    background-color: #656C76;
+}
+
+.btnBlue {
+    padding: 0.3rem;
+    margin: 0.3rem;
+    border-radius: 1rem;
+    background-color: #58ACDB;
+}

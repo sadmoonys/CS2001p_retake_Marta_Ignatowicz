@@ -12,11 +12,11 @@ class Header extends Component {
                 <img src={NWLOGO} alt="" className="image" />
 
                 <Link className="options"style={{ textDecoration: 'none' }} to="/">
-                    HOME
+                    Home
                 </Link>
-                <nav className="options">DISCOVERY</nav>
-                <nav className="options" href="">SOCIAL</nav>
-                <nav className="options">CONTACT</nav>
+                <nav className="options">Discovery</nav>
+                <nav className="options" href="">Social</nav>
+                <nav className="options">Contact</nav>
                 <div className="profLog">
                     <Link className="myProfileBtn" style={{ textDecoration: 'none' }} to="/UserProfile" >
                         My profile

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../Header/Header'
+import HeaderAfterLogin from '../Header/HeaderAfterLogin'
 import './CategoriesStyle.css'
 
 class Categories extends Component {
@@ -34,7 +34,7 @@ class Categories extends Component {
     render() {
         return (
             <html>
-                <Header />
+                <HeaderAfterLogin />
                 <div className="personalFolders"> 📌 Personal Folders</div>
                 <section className="categoriesSection">
                     {/* <select onChange={this.handleChangeCategory.bind(this)}>
