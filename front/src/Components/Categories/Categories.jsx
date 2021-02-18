@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import HeaderAfterLogin from '../Header/HeaderAfterLogin'
+import {Link} from 'react-router-dom'; 
 import './CategoriesStyle.css'
 
 class Categories extends Component {
@@ -48,7 +49,14 @@ class Categories extends Component {
                     <div className="renderFolders">
                         {this.state.categories.map((categories, index) => {
                             return <div className="folders" key={index}>
-                                {categories}
+                                <Link 
+                                to={{ pathname:"/CreateNote", data:categories}}
+                                className="renderFolders"
+                                style={{ textDecoration: 'none', color:'white' }}
+                                >
+                                    {categories}
+                                </Link>
+
                             </div>
                         })}
                         {
@@ -58,10 +66,10 @@ class Categories extends Component {
                                         type="text"
                                         placeholder="Add a new category"
                                         onKeyUp={this.handlerEventInput.bind(this)} />
-                                    <div onClick={()=>this.setState({adding:false})}>cancel</div>
+                                    <div onClick={() => this.setState({ adding: false })}>cancel</div>
                                 </div>
                                 :
-                                <div className="folders" onClick={()=>{this.setState({adding:true})}}>
+                                <div className="folders" onClick={() => { this.setState({ adding: true }) }}>
                                     +
                         </div>
                         }

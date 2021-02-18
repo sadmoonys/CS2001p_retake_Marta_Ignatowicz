@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from "../Header/Header"
+import HeaderAfterLogin from "../Header/HeaderAfterLogin"
 import Footer from "../Footer/Footer"
 import red from "../../Images/red.png"
 import green from "../../Images/green.png"
@@ -8,6 +8,7 @@ import light_blue from '../../Images/light_blue.png'
 import "./UserprofileStyle.css"
 import { Link } from 'react-router-dom';
 import axios from 'axios'
+import Auth from '../../Auth';
 
 class Userprofile extends Component {
     constructor(props) {
@@ -19,9 +20,13 @@ class Userprofile extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/todos/1')
+        axios.get('/api/notes', {
+            headers: {'Authorization': `Bearer ${Auth.token}`
+            }})
         .then(response =>{
-            console.log(response)
+            console.log(response.data)
+            this.setState({posts:response.data})
+
         })
         .catch(error =>{
             console.log(error)
@@ -29,13 +34,17 @@ class Userprofile extends Component {
     }
 
 
-    render() {
+    render(){ 
+    const {posts} = this.state
         return (
+            
 
             <html>
-                <Header />
+                <HeaderAfterLogin />
                 <main >
                     <h1> My showcase </h1>
+                    <p>
+                        {posts.title}</p>
                     <br/>
                     <div className='side'>
                         <div>

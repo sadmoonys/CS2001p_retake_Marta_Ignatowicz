@@ -3,6 +3,8 @@ import NewNote from './NewNote/NewNote'
 import ListOfNotes from './ListOfNotes/ListOfNotes'
 import HeaderAfterLogin from '../Header/HeaderAfterLogin'
 import { Link } from 'react-router-dom';
+import axios from 'axios'
+import Auth from '../../Auth';
 import './CreateNoteStyle.css'
 
 
@@ -11,6 +13,7 @@ class CreateNote extends Component {
         super();
         this.state = {
             notes: [],
+            posts: []
 
         }
     }
@@ -31,13 +34,29 @@ class CreateNote extends Component {
         this.setState({ nota: arrayNotes })
     }
 
+    componentDidMount() {
+        axios.get('/api/notes', {
+            headers: {'Authorization': `Bearer ${Auth.token}`
+            }})
+        .then(response =>{
+            for(var n=0; n<=response.data.length; n++){
+                this.createNote(response.data[n].title, response.data[n].text)
+            }
+        })
+        .catch(error =>{
+            console.log(error)
+        })
+    }
+
     render() {
+        const { data } = this.props.location
+        const {posts} = this.state
         return (
             <html>
                 <HeaderAfterLogin />
                 <section className="noteBody">
                     <div className="FolderDiv">
-                        Current folder
+                        {data}
                     </div>
                     <NewNote
                         className="Notes"
@@ -48,9 +67,25 @@ class CreateNote extends Component {
                         Notes on this folder
                     </div>
                     <main>
+
+                        <div>
+                            {/* Notes
+                            {posts.map(post => this.createNote (post.title, post.text))} */}
+
+                        </div>
                         <ListOfNotes
                             deleteNote={this.deleteNote.bind(this)}
                             notes={this.state.notes} />
+
+                        <div>
+                            {}
+                        </div>
+
+                         {/* <ListOfNotes
+                            deleteNote={this.deleteNote.bind(this)
+                            notes={this.}
+                                                    />  */}
+
                     </main>
                 </section>
                 <footer>

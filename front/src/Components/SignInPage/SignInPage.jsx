@@ -31,7 +31,7 @@ class SignInPage extends Component {
         .then( response =>{
             auth.authBearer(response.data)
             if(auth.login(response) == true){
-                this.props.history.push('/CreateNote')
+                this.props.history.push('/Categories')
             }
             
         })   
