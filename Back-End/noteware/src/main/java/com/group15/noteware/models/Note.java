@@ -8,7 +8,7 @@ public class Note {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id")
-    private int id;
+    private long id;
     @Column (name = "title")
     private String title;
     @Column(name = "text")
@@ -17,7 +17,7 @@ public class Note {
     public Note() {
     }
 
-    public Note(int id, String title, String text) {
+    public Note(long id, String title, String text) {
         this.id = id;
         this.title = title;
         this.text = text;
@@ -29,11 +29,11 @@ public class Note {
     }
 
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
