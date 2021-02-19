@@ -9,7 +9,6 @@ class Categories extends Component {
         this.state = {
             categories: [],
             adding: false
-
         }
     }
 

@@ -3,9 +3,7 @@ package com.group15.noteware.controllers;
 import com.group15.noteware.models.Note;
 import com.group15.noteware.repository.notesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,8 +16,14 @@ public class NoteController {
     @Autowired
     notesRepository notesRepository;
 
-    @GetMapping
+    @GetMapping(value = "/load")
     public List<Note> getAll(){
+        return notesRepository.findAll();
+    }
+
+    @PostMapping(value = "/send")
+    public List<Note> persist(@RequestBody final Note notes){
+        notesRepository.save(notes);
         return notesRepository.findAll();
     }
 }
