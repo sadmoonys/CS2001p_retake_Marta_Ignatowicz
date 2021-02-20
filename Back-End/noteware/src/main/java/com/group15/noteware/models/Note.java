@@ -23,12 +23,6 @@ public class Note {
         this.text = text;
     }
 
-    public Note(String title, String text) {
-        this.title = title;
-        this.text = text;
-    }
-
-
     public long getId() {
         return id;
     }

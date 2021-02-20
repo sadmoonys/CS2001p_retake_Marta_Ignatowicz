@@ -16,23 +16,19 @@ class CreateNote extends Component {
         }
     }
 
-    createNote(title, text, category) {
-        const newNote = { title, text, category };
+    createNote(id, title, text) {
+        const newNote = { id, title, text};
         const newArrayNotes = [...this.state.notes, newNote];
         const newState = {
             notes: newArrayNotes
         }
         this.setState(newState)
-        console.log(this.state.notes)
-        // for (var n = 0; n <= this.state.notes.length; n++) {
-        //     console.log(this.state.notes[n])
-        // }
-        
     }
 
     deleteNote(index) {
         let arrayNotes = this.state.notes;
         arrayNotes.splice(index, 1);
+        console.log(index)
         this.setState({ nota: arrayNotes })
     }
 
@@ -44,8 +40,10 @@ class CreateNote extends Component {
         })
             .then(response => {
                 for (var n = 0; n <= response.data.length; n++) {
-                    this.createNote(response.data[n].title, response.data[n].text)
+                    this.createNote(response.data[n].id, response.data[n].title, response.data[n].text)
                 }
+
+
             })
             .catch(error => {
                 console.log(error)

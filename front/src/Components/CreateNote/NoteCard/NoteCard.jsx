@@ -4,7 +4,8 @@ import { ReactComponent as Delete } from '../../../Images/delete.svg'
 import { ReactComponent as Edit } from '../../../Images/create-24px.svg'
 import { ReactComponent as Editing } from '../../../Images/done-24px.svg'
 import { ReactComponent as Cancel } from '../../../Images/clear-24px.svg'
-import CreateNote from "../CreateNote";
+import axios from 'axios';
+import Auth from '../../../Auth';
 class NoteCard extends Component {
 
   constructor(props) {
@@ -19,7 +20,6 @@ class NoteCard extends Component {
     text: "" + this.props.text
   }
 
-
   delete() {
     const indice = this.props.indice;
     this.props.deleteNote(indice);
@@ -31,26 +31,57 @@ class NoteCard extends Component {
     })
   }
 
+  submitHandler = e => {
+
+    this.setState({
+      isInEdit: false,
+      title: this.titlee.current.value,
+      text: this.text.current.value
+    })
+    e.preventDefault()
+    
+    const formatJSON =
+    {
+      id: this.props.id,
+      title: this.titlee.current.value,
+      text: this.text.current.value
+    }
+
+    console.log(formatJSON)
+    const config = {
+      headers: { Authorization: `Bearer ${Auth.token}` }
+    };
+
+    axios.post('http://localhost:8080/api/notes/updatenotes', formatJSON, config)
+      .then(response => {
+        console.log(response)
+      }).catch(error => {
+        console.log(error)
+      })
+  }
 
   render() {
     return (this.state.isInEdit ?
       <section className="insideNote">
         <header>
-          <textarea 
-          className = "changeTitle"
-          type="text" 
-          ref={this.titlee} 
-          id=""  rows="1"
-          defaultValue={this.state.title} />
+          <textarea
+            className="changeTitle"
+            type="text"
+            ref={this.titlee}
+            id="" rows="1"
+            defaultValue={this.state.title} />
         </header>
         <textarea
-        className="changeText"
+          className="changeText"
           type="text"
-          id=""  rows="4"
+          id="" rows="4"
           ref={this.text}
-          defaultValue={this.props.text} />
+          defaultValue={this.state.text} />
         <br />
-        <Editing onClick={() => this.setState({ isInEdit: false, title: this.titlee.current.value, text: this.text.current.value })} />
+        <Editing
+          onClick={ this.submitHandler}
+        />
+
         <Cancel onClick={() => this.setState({ isInEdit: !this.state.isInEdit })} />
       </section>
       :

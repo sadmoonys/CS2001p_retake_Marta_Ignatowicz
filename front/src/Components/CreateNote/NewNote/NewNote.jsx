@@ -23,7 +23,7 @@ class NewNote extends Component {
   createNote(e) {
     e.stopPropagation();
     e.preventDefault();
-    this.props.createNote(this.title, this.text, this.category);
+    this.props.createNote(this. id, this.title, this.text);
     
     const formatJSON  = 
       {
@@ -44,7 +44,6 @@ class NewNote extends Component {
         console.log(error)
       })
   }
-
 
 
   render() {
