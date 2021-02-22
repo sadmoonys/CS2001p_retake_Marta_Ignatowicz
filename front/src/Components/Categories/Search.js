@@ -1,6 +1,6 @@
 function Search(props) {
     return (
-        <input onCharge = { props.handleSearch}
+        <input onChange = { props.handleSearch}
         type = "text" />
     );
 }
