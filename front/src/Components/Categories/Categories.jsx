@@ -1,17 +1,30 @@
 import React, { Component } from 'react';
 import HeaderAfterLogin from '../Header/HeaderAfterLogin'
 import './CategoriesStyle.css'
+import Search from './Search.js'
+
+
+
 
 class Categories extends Component {
+
+   
+    
     constructor() {
         super()
         this.state = {
             categories: [],
-            adding: false
-
+            adding: false,
+            search: ''
+           
+          
         }
+        
+        
+   
     }
-
+     
+  
     handleChangeCategory(e) {
         e.stopPropagation();
         this.category = e.target.value;
@@ -30,8 +43,15 @@ class Categories extends Component {
         const newState = { ...this.state, categories: newArrayCategory }
         this.setState(newState)
     }
+    handleSearch = (e) => {
+        console.log(e.target.value)
+        this.setState({ search: e.target.value})
+    }
 
-    render() {
+    render() {  
+        let filter = this.state.categories.filter((val) => {
+            return val.toLowerCase().includes(this.state.search.toLowerCase())
+        })
         return (
             <html>
                 <HeaderAfterLogin />
@@ -45,13 +65,22 @@ class Categories extends Component {
                         }
                     </select> */}
 
+                    <Search handleSearch={this.handleSearch} />
+
                     <div className="renderFolders">
-                        {this.state.categories.map((categories, index) => {
+                        {filter.map((categories, index) => {
                             return <div className="folders" key={index}>
+                            <link
+                            to = {{ pathname: "/CreateNote", data: categories}}
+                            className="renderFolders"
+                            style={{ textDecoration: 'none' , color: 'white'}}
+                            />
                                 {categories}
                             </div>
                         })}
-                        {
+
+
+               {
                             this.state.adding ?
                                 <div className="folders">
                                     <input
