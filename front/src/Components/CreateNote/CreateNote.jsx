@@ -13,15 +13,19 @@ class CreateNote extends Component {
         super();
         this.state = {
             notes: [],
+            id:"",
+            title:"",
+            text:""
         }
     }
 
     createNote(id, title, text) {
-        const newNote = { id, title, text};
+        const newNote = {id:id, title:title, text:text};
         const newArrayNotes = [...this.state.notes, newNote];
         const newState = {
             notes: newArrayNotes
         }
+        console.log(newState)
         this.setState(newState)
     }
 
@@ -30,6 +34,14 @@ class CreateNote extends Component {
         arrayNotes.splice(index, 1);
         console.log(index)
         this.setState({ nota: arrayNotes })
+    }
+
+    updateNote(index, title, text, id){
+    const updateArray = this.state.notes;
+        let item = {...updateArray[updateArray[index]= {id: id, title:title, text:text}]}
+        this.setState(item)
+        console.log(item)
+        console.log(updateArray)
     }
 
     componentDidMount() {
@@ -75,7 +87,9 @@ class CreateNote extends Component {
                         </div>
                         <ListOfNotes
                             deleteNote={this.deleteNote.bind(this)}
-                            notes={this.state.notes} />
+                            updateNote={this.updateNote.bind(this)}
+                            notes={this.state.notes} 
+                            title={this.state.title}/>
                     </main>
                 </section>
                 <footer>

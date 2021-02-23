@@ -14,6 +14,7 @@ class ListOfNotes extends Component {
               <NoteCard 
               indice = {index}
               deleteNote={this.props.deleteNote}
+              updateNote={this.props.updateNote}
               title={note.title} 
               text={note.text}
               id={note.id}

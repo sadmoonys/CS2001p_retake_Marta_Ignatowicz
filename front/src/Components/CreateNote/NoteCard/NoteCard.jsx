@@ -16,8 +16,6 @@ class NoteCard extends Component {
 
   state = {
     isInEdit: false,
-    title: "" + this.props.title,
-    text: "" + this.props.text
   }
 
   delete() {
@@ -31,12 +29,17 @@ class NoteCard extends Component {
     })
   }
 
+  
+
   submitHandler = e => {
+    
+    
+    const indice = this.props.indice;
+    this.props.updateNote(indice, this.titlee.current.value, this.text.current.value, this.props.id)
+
 
     this.setState({
       isInEdit: false,
-      title: this.titlee.current.value,
-      text: this.text.current.value
     })
     e.preventDefault()
     
@@ -69,28 +72,29 @@ class NoteCard extends Component {
             type="text"
             ref={this.titlee}
             id="" rows="1"
-            defaultValue={this.state.title} />
+            defaultValue={this.props.title} />
         </header>
         <textarea
           className="changeText"
           type="text"
           id="" rows="4"
           ref={this.text}
-          defaultValue={this.state.text} />
+          defaultValue={this.props.text} />
         <br />
         <Editing
-          onClick={ this.submitHandler}
+          onClick={this.submitHandler}
         />
 
         <Cancel onClick={() => this.setState({ isInEdit: !this.state.isInEdit })} />
+      
       </section>
       :
       <section className="insideNote">
         <h4>{this.props.category}</h4>
         <header>
-          <h3 className="titleNote">{this.state.title}</h3>
+          <h3 className="titleNote">{this.props.title}</h3>
         </header>
-        <p className="textNote">{this.state.text}</p>
+        <p className="textNote">{this.props.text}</p>
         <Delete onClick={this.delete.bind(this)} />
         <Edit onClick={this.edit.bind(this)} />
       </section>
