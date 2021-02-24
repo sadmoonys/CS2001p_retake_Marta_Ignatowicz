@@ -25,7 +25,6 @@ class CreateNote extends Component {
         const newState = {
             notes: newArrayNotes
         }
-        console.log(newState)
         this.setState(newState)
     }
 
@@ -40,8 +39,6 @@ class CreateNote extends Component {
     const updateArray = this.state.notes;
         let item = {...updateArray[updateArray[index]= {id: id, title:title, text:text}]}
         this.setState(item)
-        console.log(item)
-        console.log(updateArray)
     }
 
     componentDidMount() {

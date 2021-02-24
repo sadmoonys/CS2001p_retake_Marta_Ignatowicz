@@ -1,11 +1,13 @@
 package com.group15.noteware.controllers;
 
 import com.group15.noteware.models.Note;
-import com.group15.noteware.payload.request.UserUpdateRequest;
 import com.group15.noteware.payload.request.notesUpdateRequest;
 import com.group15.noteware.payload.response.MessageResponse;
 import com.group15.noteware.repository.notesRepository;
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,6 +42,14 @@ public class NoteController {
             notesRepository.save(target);
             return target;
         });
-        return ResponseEntity.ok(new MessageResponse("User updated successfully"));
+        return ResponseEntity.ok(new MessageResponse("Note updated successfully"));
     }
+
+    @DeleteMapping("/delete/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteNote(Note id) {
+        notesRepository.delete(id);
+
+    }
+
 }

@@ -21,6 +21,11 @@ class NoteCard extends Component {
   delete() {
     const indice = this.props.indice;
     this.props.deleteNote(indice);
+
+    const config = {
+      headers: { Authorization: `Bearer ${Auth.token}` }
+    };
+    axios.delete(`http://localhost:8080/api/notes/delete/${this.props.id}`, config)
   }
 
   edit() {
@@ -29,11 +34,7 @@ class NoteCard extends Component {
     })
   }
 
-  
-
   submitHandler = e => {
-    
-    
     const indice = this.props.indice;
     this.props.updateNote(indice, this.titlee.current.value, this.text.current.value, this.props.id)
 

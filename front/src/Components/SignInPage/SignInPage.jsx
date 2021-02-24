@@ -30,6 +30,7 @@ class SignInPage extends Component {
         axios.post('http://localhost:8080/api/auth/signin', this.state)
         .then( response =>{
             auth.authBearer(response.data)
+            console.log(response.data)
             if(auth.login(response) == true){
                 this.props.history.push('/Categories')
             }
