@@ -4,7 +4,7 @@ cs2001-2020_21-group15 created by GitHub Classroom
 NOTEWARE
 
 What is Noteware?! 
-<img src="(https://github.com/BrunelCS/cs2001-2020_21-group15/blob/main/front/src/Images/NWLOGO.png=100x" width="200">
+<img src="https://github.com/BrunelCS/cs2001-2020_21-group15/blob/main/front/src/Images/NWLOGO.png=100x" width="200">
 
   We are creating an application which allows users to study collaboratively with other students across the globe. 
 
