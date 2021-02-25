@@ -5,7 +5,9 @@ NOTEWARE
 
 What is Noteware?! 
 
-(https://github.com/BrunelCS/cs2001-2020_21-group15/blob/main/front/src/Images/NWLOGO.png=100x20)
+Try this markdown:
+
+![alt text](https://github.com/BrunelCS/cs2001-2020_21-group15/blob/main/front/src/Images/NWLOGO.png=100x20)
 
 
 
