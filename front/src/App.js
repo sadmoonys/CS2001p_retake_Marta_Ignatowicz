@@ -9,8 +9,7 @@ import Categories from './Components/Categories/Categories'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute'
 import Search from './Components/Categories/Search'
-
-
+import PageError from './Components/Page Error/PageError'
 function App() {
     return ( 
         <Router>
@@ -23,8 +22,9 @@ function App() {
                 <Route exact path="/UpdateProfile" component={UpdateProfile}/>
                 <Route exact exact path="/" component={LandingIndex}/>
                 <Route exact path="/Search" component={Search}/>
+                
              
-                <Route path="*" component={() => "404 NOT FOUND"}/>
+                <Route path="*" component= {PageError}/>
                 
             </Switch>
         </Router>
