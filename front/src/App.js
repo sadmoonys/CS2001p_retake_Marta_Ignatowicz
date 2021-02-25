@@ -9,7 +9,7 @@ import Categories from './Components/Categories/Categories'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute'
 import Search from './Components/Categories/Search'
-import PageError from './Components/Page Error/PageError'
+import PageError from './Components/PageError/PageError'
 function App() {
     return ( 
         <Router>
