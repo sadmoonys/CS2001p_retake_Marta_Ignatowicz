@@ -5,6 +5,8 @@ NOTEWARE
 
 What is Noteware?
 
+![alt text](https://github.com/BrunelCS/cs2001-2020_21-group15/blob/main/front/src/Images/NWLOGO.png)
+
   We are creating an application which allows users to study collaboratively with other students across the globe. 
 
 Why have we made Noteware?
