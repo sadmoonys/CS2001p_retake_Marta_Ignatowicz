@@ -5,5 +5,6 @@ package com.group15.noteware.models;
 
 public class Category {
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTIT)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    
 }
