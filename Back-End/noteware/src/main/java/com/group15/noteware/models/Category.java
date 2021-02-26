@@ -6,6 +6,13 @@ package com.group15.noteware.models;
 public class Category {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name="catId")
     private long id;
+    @Column(name = "title")
+    private String title;
+
+    public Category(){
+    }
+
+    public Category(long)
 }
