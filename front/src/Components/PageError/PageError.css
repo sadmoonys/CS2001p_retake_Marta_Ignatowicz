@@ -1,19 +1,26 @@
-.Sorry{
-    color: white;
+*{
+    font-family: Arial, sans serif;
+ }
+.container-404 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .Sorry{
+      color: white;
+      text-align: center;
+  }
+  .image-404 {
+    width: 100px;
+  }
+  .Four{
+      color: white;
+      text-align: center;
+      
+  }
+  .Exist{
+      color: white;
+      text-align: center;
 
-
-
-
-}
-
-.Four{
-    color: white;
-
-}
-
-
-
-
-.Exist{
-    color: white;
-}
+  }
