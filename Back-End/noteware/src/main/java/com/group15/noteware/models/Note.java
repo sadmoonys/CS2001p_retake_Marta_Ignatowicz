@@ -52,7 +52,6 @@ public class Note {
     @Override
     public String toString() {
         return "Note{" +
-                "catId" + catId +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", text='" + text + '\'' +

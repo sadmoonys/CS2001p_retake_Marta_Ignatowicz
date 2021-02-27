@@ -34,5 +34,11 @@ public class Category {
         this.title = title;
     }
 
-
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Category{" +
+                "catId=" + catId +
+                ", title='" + title + '\'' +
+                '}';
+    }
 }
