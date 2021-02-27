@@ -19,6 +19,7 @@ public class Note {
     }
 
     public Note(long id, String title, String text) {
+        this.catId = catId;
         this.id = id;
         this.title = title;
         this.text = text;
@@ -51,6 +52,7 @@ public class Note {
     @Override
     public String toString() {
         return "Note{" +
+                "catId" + catId +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", text='" + text + '\'' +

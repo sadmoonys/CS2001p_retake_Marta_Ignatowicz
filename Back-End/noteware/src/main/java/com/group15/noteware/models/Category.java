@@ -7,7 +7,7 @@ public class Category {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="catId")
-    private long id;
+    private long catId;
     @Column(name = "title")
     private String title;
 
@@ -15,20 +15,24 @@ public class Category {
     }
 
     public Category(long catId, String title){
-        this.catId =id;
+        this.catId =catId;
         this.title= title;
     }
-    public long getId() {
-        return id;
+
+    public long getCatId() {
+        return catId;
     }
-    public void setId(long id) {
-        this.id = id;
+
+    public void setCatId(long catId) {
+        this.catId = catId;
     }
+
     public String getTitle() {
         return title;
     }
     public void setTitle(String title) {
         this.title = title;
     }
+
 
 }
