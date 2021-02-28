@@ -58,5 +58,11 @@ public class Note {
                 ", text='" + text + '\'' +
                 '}';
     }
+
+    @ManyToMany(fetch =FetchType.LAZY)
+    @JoinTable(name = "note_category",
+            joinColumns = @JoinColumn(name = "note_id"),
+            inverseJoinColumns = @JoinColumn(name = "category_id"))
+    private Set<Category> categorySet = new HashSet<>();
 }
 
