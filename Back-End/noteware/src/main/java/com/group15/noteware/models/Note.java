@@ -9,7 +9,6 @@ public class Note {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id")
     private long id;
-    @Column (name = "catId")
     @Column (name = "title")
     private String title;
     @Column(name = "text")
@@ -19,11 +18,11 @@ public class Note {
     }
 
     public Note(long id, String title, String text) {
-        this.catId = catId;
         this.id = id;
         this.title = title;
         this.text = text;
     }
+
 
     public long getId() {
         return id;
@@ -48,6 +47,8 @@ public class Note {
     public void setText(String text) {
         this.text = text;
     }
+
+
 
     @Override
     public String toString() {
