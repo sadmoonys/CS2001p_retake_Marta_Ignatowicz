@@ -6,25 +6,25 @@ package com.group15.noteware.models;
 public class Category {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="catId")
-    private long catId;
+    @Column(name="id")
+    private long id;
     @Column(name = "title")
     private String title;
 
     public Category(){
     }
 
-    public Category(long catId, String title){
-        this.catId =catId;
+    public Category(long id, String title){
+        this.id =id;
         this.title= title;
     }
 
-    public long getCatId() {
-        return catId;
+    public long getId() {
+        return id;
     }
 
-    public void setCatId(long catId) {
-        this.catId = catId;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -34,13 +34,6 @@ public class Category {
         this.title = title;
     }
 
-    @java.lang.Override
-    public java.lang.String toString() {
-        return "Category{" +
-                "catId=" + catId +
-                ", title='" + title + '\'' +
-                '}';
-    }
 
 
 }
