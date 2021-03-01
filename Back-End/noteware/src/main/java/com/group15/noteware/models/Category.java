@@ -1,4 +1,6 @@
 package com.group15.noteware.models;
+import javax.persistence.*;
+
 
 @Entity
 @Table(name= "category")
