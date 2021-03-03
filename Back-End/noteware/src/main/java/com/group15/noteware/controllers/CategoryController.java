@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
+@CrossOrigin(origins = "*", maxAge = 50)
+@RestController
+@RequestMapping(path = "api/categories")
+
 public class CategoryController {
     @Autowired
     CategoryRepository CategoryRepository;
@@ -29,7 +33,6 @@ public class CategoryController {
         CategoryRepository.save(category);
         return CategoryRepository.findAll();
     }
-
 
     @DeleteMapping("/delete/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
