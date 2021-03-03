@@ -10,15 +10,15 @@ public class Category {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id")
     private long id;
-    @Column(name = "category")
-    private String category;
+    @Column(name = "categoryName")
+    private String categoryName;
 
     public Category(){
     }
 
     public Category(long id, String title){
         this.id =id;
-        this.category= category;
+        this.categoryName= categoryName;
     }
 
     public long getId() {
@@ -29,19 +29,19 @@ public class Category {
         this.id = id;
     }
 
-    public String getCategory() {
-        return category;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     @java.lang.Override
     public java.lang.String toString() {
         return "Category{" +
                 "id=" + id +
-                ", title='" + category + '\'' +
+                ", title='" + categoryName + '\'' +
                 '}';
     }
 
