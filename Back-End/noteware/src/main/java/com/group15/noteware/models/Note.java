@@ -23,6 +23,7 @@ public class Note {
         this.text = text;
     }
 
+
     public long getId() {
         return id;
     }
@@ -47,6 +48,8 @@ public class Note {
         this.text = text;
     }
 
+
+
     @Override
     public String toString() {
         return "Note{" +
@@ -55,5 +58,11 @@ public class Note {
                 ", text='" + text + '\'' +
                 '}';
     }
+
+ //   @ManyToMany(fetch =FetchType.LAZY)
+   // @JoinTable(name = "note_category",
+     //       joinColumns = @JoinColumn(name = "note_id"),
+     //       inverseJoinColumns = @JoinColumn(name = "category_id"))
+ //   private Set<Category> categorySet = new HashSet<>();
 }
 
