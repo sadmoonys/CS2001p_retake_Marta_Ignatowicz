@@ -16,6 +16,7 @@ public class Category {
     public Category(){
     }
 
+
     public Category(long id, String category_name){
         this.id =id;
         this.category_name= category_name;
@@ -29,7 +30,7 @@ public class Category {
         this.id = id;
     }
 
-    public String getCategoryName() {
+    public String getCategory_name() {
         return category_name;
     }
 

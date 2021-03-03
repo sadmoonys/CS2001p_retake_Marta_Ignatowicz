@@ -5,13 +5,11 @@ import javax.validation.constraints.Size;
 
 public class categoryUpdateRequest {
 
-
-    public String getCategoryName() {
-        return categoryName;
+    public String getCategory_name(){
+        return category_name;
     }
-
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
+    public void setCategory_name(String category_name){
+        this.category_name= category_name;
     }
 
     public long getId() {
@@ -25,6 +23,7 @@ public class categoryUpdateRequest {
     private long Id;
 
     @Size(min = 0, max = 50)
-    private String categoryName;
+    private String category_name;
+
 
 }
