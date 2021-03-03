@@ -22,8 +22,6 @@ function App() {
                 <Route exact path="/UpdateProfile" component={UpdateProfile}/>
                 <Route exact exact path="/" component={LandingIndex}/>
                 <Route exact path="/Search" component={Search}/>
-                
-             
                 <Route path="*" component= {PageError}/>
                 
             </Switch>
