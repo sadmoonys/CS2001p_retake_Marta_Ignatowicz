@@ -13,7 +13,7 @@ public class CategoryController {
     @Autowired
     CategoryRepository CategoryRepository;
 
-    @GetMapping(value = "/load")
+    @GetMapping(value = "/categoryLoad")
     public List<Category> getAll() {
         return CategoryRepository.findAll();
     }
