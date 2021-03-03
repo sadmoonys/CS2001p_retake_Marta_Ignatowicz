@@ -2,8 +2,7 @@ package com.group15.noteware.controllers;
 
 
 import com.group15.noteware.models.Category;
-import com.group15.noteware.models.Note;
-import com.group15.noteware.payload.request.notesUpdateRequest;
+import com.group15.noteware.payload.request.categoryUpdateRequest;
 import com.group15.noteware.payload.response.MessageResponse;
 import com.group15.noteware.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +32,17 @@ public class CategoryController {
         categoryRepository.save(category);
         return categoryRepository.findAll();
     }
+
+    @PostMapping("/updateCategory")
+    public ResponseEntity<?> updateCategory(@Valid @RequestBody categoryUpdateRequest  UpdateRequest) {
+        categoryRepository.findById(UpdateRequest.getId()).map(target -> {
+            target.setCategory_name(UpdateRequest.getCategory_name());
+            categoryRepository.save(target);
+            return target;
+        });
+        return ResponseEntity.ok(new MessageResponse("Category updated successfully"));
+    }
+
 
     @DeleteMapping("/delete/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)

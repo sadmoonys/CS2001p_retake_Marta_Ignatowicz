@@ -1,6 +1,4 @@
 package com.group15.noteware.payload.request;
-//import javax.validation.constraints.Size;
-
 import javax.validation.constraints.Size;
 
 public class categoryUpdateRequest {
@@ -8,6 +6,7 @@ public class categoryUpdateRequest {
     public String getCategory_name(){
         return category_name;
     }
+
     public void setCategory_name(String category_name){
         this.category_name= category_name;
     }
