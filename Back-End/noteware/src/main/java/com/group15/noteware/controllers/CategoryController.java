@@ -20,24 +20,24 @@ import java.util.List;
 
 public class CategoryController {
     @Autowired
-    CategoryRepository CategoryRepository;
+    CategoryRepository categoryRepository;
 
     @GetMapping(value = "/loadCategory")
     public List<Category> getAll() {
-        return CategoryRepository.findAll();
+        return categoryRepository.findAll();
     }
 
 
     @PostMapping(value = "/sendCategory")
     public List<Category> persist(@RequestBody final Category category) {
-        CategoryRepository.save(category);
-        return CategoryRepository.findAll();
+        categoryRepository.save(category);
+        return categoryRepository.findAll();
     }
 
     @DeleteMapping("/delete/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteCategory(Category id) {
-        CategoryRepository.delete(id);
+        categoryRepository.delete(id);
     }
 
 }

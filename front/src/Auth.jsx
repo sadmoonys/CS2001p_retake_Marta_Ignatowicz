@@ -8,6 +8,7 @@ class Auth {
         const resp = JSON.stringify(data)
         const resp2 = JSON.parse(resp)
         this.token = resp2.accessToken
+        console.log(this.token)
         return this.token
     }
 

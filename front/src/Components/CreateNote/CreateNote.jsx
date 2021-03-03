@@ -77,11 +77,6 @@ class CreateNote extends Component {
                         Notes on this folder
                     </div>
                     <main>
-
-                        <div>
-                          
-
-                        </div>
                         <ListOfNotes
                             deleteNote={this.deleteNote.bind(this)}
                             updateNote={this.updateNote.bind(this)}
