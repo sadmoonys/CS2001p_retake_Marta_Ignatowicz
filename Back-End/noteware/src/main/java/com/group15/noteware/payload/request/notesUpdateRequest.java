@@ -28,9 +28,9 @@ public class notesUpdateRequest {
 
     private long Id;
 
-    @Size(min = 0, max = 300)
+    @Size(min = 0, max = 50)
     private String title;
 
-    @Size(min = 0, max = 50)
+    @Size(min = 0, max = 300)
     private String text;
 }
