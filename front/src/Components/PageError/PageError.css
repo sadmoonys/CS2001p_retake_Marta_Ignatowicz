@@ -1,6 +1,4 @@
 *{
-    justify-content: center;
-    text-align: center;
     font-family: Arial, sans serif;
  }
 .container-404 {
@@ -17,6 +15,8 @@
     width: 100px;
   }
   .Four{
+      font-style: bold;
+      font-size: 200%;
       color: white;
       text-align: center;
       
