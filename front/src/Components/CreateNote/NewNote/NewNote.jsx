@@ -23,7 +23,7 @@ class NewNote extends Component {
   createNote(e) {
     e.stopPropagation();
     e.preventDefault();
-    this.props.createNote(this. id, this.title, this.text);
+    this.props.createNote(this.id, this.title, this.text);
     
     const formatJSON  = 
       {

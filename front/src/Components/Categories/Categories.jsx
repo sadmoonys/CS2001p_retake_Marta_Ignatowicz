@@ -19,7 +19,7 @@ class Categories extends Component {
 
     handlerEventInput(e) {
         e.preventDefault();
-        if (e.keyCode == 13) {
+        if (e.keyCode === 13) {
             let categoryValue = e.target.value;
             this.addCategories(categoryValue);
         }

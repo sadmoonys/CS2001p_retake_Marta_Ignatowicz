@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import "./SignInStyle.css"
-import User from '../../Images/account_circle-black-18dp.svg'
+import User from '../../Images/user.svg'
 import Password from '../../Images/vpn_key-24px.svg'
 import axios from 'axios'
 import auth from '../../Auth'
@@ -31,7 +31,7 @@ class SignInPage extends Component {
         .then( response =>{
             auth.authBearer(response.data)
             console.log(response.data)
-            if(auth.login(response) == true){
+            if(auth.login(response) === true){
                 this.props.history.push('/Categories')
             }
             
@@ -55,7 +55,7 @@ class SignInPage extends Component {
                         <form className="logSection" onSubmit={this.submitHandler}>
                            
                            <div className="username">
-                               <img src={User}></img>
+                               <img alt="" src={User}/>
                                <label for="username"></label> 
                                 <input 
                                 type="text" 

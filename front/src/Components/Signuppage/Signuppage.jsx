@@ -3,7 +3,7 @@ import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import "./SignupStyle.css"
 import { GoogleLogin } from 'react-google-login';
-import User from "../../Images/account_circle-black-18dp.svg"
+import User from "../../Images/user.svg"
 import Email from "../../Images/email-24px.svg"
 import Password from "../../Images/done-24px.svg"
 import rePassword from "../../Images/done_all-24px.svg"
