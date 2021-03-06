@@ -15,15 +15,14 @@ class Auth {
     login(response) {
         const resp = JSON.stringify(response)
         const resp2 = JSON.parse(resp)
-        if (resp2.status == 200) {
+        if (resp2.status === 200) {
             return this.authenticated = true;
         }
     }
 
 
-    logout(cb) {
+    logout() {
         this.authenticated = false;
-        cb();
     }
 
     isAuthenticated() {

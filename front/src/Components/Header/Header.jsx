@@ -6,10 +6,8 @@ import { Link } from 'react-router-dom';
 class Header extends Component {
     render() {
         return (
-
-            <header className='mainHeader'>
+            <div className='mainHeader'>
                 <img src={NWLOGO} alt="" className="image" />
-
                 <Link className="options"style={{ textDecoration: 'none' }} to="/">
                     Home
                 </Link>
@@ -21,7 +19,7 @@ class Header extends Component {
                 <img src={NWLOGO} alt="" className="image-singIn" />
                     Sign in
                 </Link>
-            </header>
+            </div>
 
         );
     }

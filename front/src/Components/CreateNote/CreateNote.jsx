@@ -62,7 +62,7 @@ class CreateNote extends Component {
     render() {
         const { data } = this.props.location
         return (
-            <html>
+            <>
                 <HeaderAfterLogin />
                 <section className="noteBody">
                     <div className="FolderDiv">
@@ -86,10 +86,10 @@ class CreateNote extends Component {
                 </section>
                 <footer>
                     <Link className="returnFolder" to="/Categories">
-                        <p className="btnBlue">&lt;</p>  Return to folders
+                         Return to folders
                     </Link>
                 </footer>
-            </html>
+            </>
 
         );
     }
