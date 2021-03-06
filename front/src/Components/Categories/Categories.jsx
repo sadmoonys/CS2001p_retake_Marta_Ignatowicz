@@ -9,8 +9,8 @@ class Categories extends Component {
     constructor() {
         super()
         this.state = {
-    //        id:"",
-            categories: [],
+            id:"",
+            categories:"",
             adding: false
         }
     }
@@ -28,10 +28,13 @@ class Categories extends Component {
         }
     }
 
-    addCategories(nameCategory) {
-        const newArrayCategory = [...this.state.categories, nameCategory]
-        const newState = { ...this.state, categories: newArrayCategory }
-        this.setState(newState)
+    addCategories(id, nameCategory) {
+        const newCategory = { id:id, nameCategory:nameCategory};
+        const newArrayCategory = [...this.state.categories, newCategory];
+      //  this.setState(newState)
+        const newCategoryState = {
+            categories: newArrayCategory
+        }
     }
 
     deleteCategory(index){
@@ -41,15 +44,15 @@ class Categories extends Component {
         this.setState({ category: arrayCategory })
     }
 
-    updateCategory(index,categories){
+    updateCategory(index,categories, id){
         const updateArray= this.state.categories
-        let item = {...updateArray[updateArray[index]= {categories:categories}]}
+        let item = {...updateArray[updateArray[index]= {id:id, categories:categories}]}
         this.setState((item))
 
     }
 
     componentDidMount() {
-        axios.get('/api/api/categories/loadCategory', {
+        axios.get('/api/categories/loadCategory', {
             headers: {
                 'Authorization': `Bearer ${Auth.token}`
             }
