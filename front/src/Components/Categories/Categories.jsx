@@ -31,6 +31,13 @@ class Categories extends Component {
         this.setState(newState)
     }
 
+    deleteCategory(nameCategory){
+        let arrayCategory = this.state.categories;
+        arrayCategory.splice(index, 1)
+        console.log(index)
+        this.setState({ category: arrayCategory })
+    }
+
     render() {
         return (
             <html>

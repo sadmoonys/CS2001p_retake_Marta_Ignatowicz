@@ -32,8 +32,8 @@ class CreateNote extends Component {
         let arrayNotes = this.state.notes;
         arrayNotes.splice(index, 1);
         console.log(index)
-        this.setState({ nota: arrayNotes })
-    }
+        this.setState({ note: arrayNotes })
+    } //changed "nota" to "note"
 
     updateNote(index, title, text, id){
     const updateArray = this.state.notes;
