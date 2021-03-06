@@ -40,11 +40,13 @@ class Categories extends Component {
     }
 
     updateCategory(index,categories){
-        const updateCategory = this.state.categories
+        const updateArray= this.state.categories
         let item = {...updateArray[updateArray[index]= {categories:categories}]}
         this.setState((item))
 
     }
+
+
 
     render() {
         return (
