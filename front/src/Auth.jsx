@@ -21,9 +21,8 @@ class Auth {
     }
 
 
-    logout(cb) {
+    logout() {
         this.authenticated = false;
-        cb();
     }
 
     isAuthenticated() {

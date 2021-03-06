@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import NWLOGO from '../../Images/NWLOGO.png'
-import auth from '../../Auth';
 import './style.css'
 import { Link } from 'react-router-dom';
 
@@ -21,11 +20,7 @@ class Header extends Component {
                     <Link className="myProfileBtn" style={{ textDecoration: 'none' }} to="/UserProfile" >
                         My profile
                     </Link>
-                    <Link className="logOutBtn" style={{ textDecoration: 'none' }} onClick={() => {
-                        auth.logout(() => {
-                            this.props.history.push('/')
-                        })
-                    }}>
+                    <Link className="logOutBtn" style={{ textDecoration: 'none' }} to="/">
                         Log Out
                     </Link>
                 </div>

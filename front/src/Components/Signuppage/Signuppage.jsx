@@ -47,17 +47,17 @@ class Signuppage extends Component {
         const {username, email, password, confirmPass} = this.state;
 
         return (  
-            <html>
+            <section>
                 <Header/>
                 <main>
-                <div class="yellowBoxUP">
-                        <p class="signup">Sign Up </p>
-                        <form class="logSection" onSubmit={this.submitHandler}>
+                <div className="yellowBoxUP">
+                        <p className="signup">Sign Up </p>
+                        <form className="logSection" onSubmit={this.submitHandler}>
 
                         <div className="userBox">
                             <img src={User} alt=""/>
                             <input 
-                            class="Enter Name" 
+                            className="Enter Name" 
                             type="text"
                             name="username"
                             placeholder="Name" 
@@ -69,7 +69,7 @@ class Signuppage extends Component {
                         <div className="email">
                             <img src={Email} alt=""/>
                             <input 
-                            class="Enter Email" 
+                            className="Enter Email" 
                             type="text" 
                             name="email"
                             placeholder="Email" 
@@ -81,7 +81,7 @@ class Signuppage extends Component {
                         <div className="password">
                             <img src={Password} alt=""/>
                             <input 
-                            class="password" 
+                            className="password" 
                             type="password" 
                             name="password"
                             placeholder="Password" 
@@ -93,7 +93,7 @@ class Signuppage extends Component {
                         <div className="rePassword">
                             <img src={rePassword} alt=""/>
                             <input 
-                            class="Please enter your password agian" 
+                            className="Please enter your password agian" 
                             type="password" 
                             name="confirmPass"
                             placeholder="re enter password" 
@@ -101,10 +101,10 @@ class Signuppage extends Component {
                             onChange={this.changeHandler}
                             />
                         </div>
-                        <button class="CREATE AN ACCOUNT" type="submit">Create Account</button>
+                        <button className="CREATE AN ACCOUNT" type="submit">Create Account</button>
 
 
-                        <label for="submit"></label>
+                        {/* <label for="submit"></label> */}
 
                         </form>
                         <meta name="google-signin-client_id" content="12345678-gbgin9h7q69rpjehq1cd2441b4nosnid.apps.googleusercontent.com"></meta>
@@ -119,7 +119,7 @@ class Signuppage extends Component {
                 </div>
                 </main>
                 <Footer/>
-            </html>
+            </section>
         );
     }
 }

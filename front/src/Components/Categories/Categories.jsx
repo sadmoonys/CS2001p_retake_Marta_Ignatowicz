@@ -33,10 +33,10 @@ class Categories extends Component {
 
     render() {
         return (
-            <html>
+            <section>
                 <HeaderAfterLogin />
                 <div className="personalFolders"> 📌 Personal Folders</div>
-                <section className="categoriesSection">
+                <div className="categoriesSection">
                     {/* <select onChange={this.handleChangeCategory.bind(this)}>
                         <option>Sem Categoria</option>
                         {this.state.categories.map((category => {
@@ -49,7 +49,7 @@ class Categories extends Component {
                         {this.state.categories.map((categories, index) => {
                             return <div className="folders" key={index}>
                                 <Link 
-                                to={{ pathname:"/CreateNote", data:categories}}
+                                to={{pathname:"/CreateNote", data:categories}}
                                 className="renderFolders"
                                 style={{ textDecoration: 'none', color:'white' }}
                                 >
@@ -75,9 +75,9 @@ class Categories extends Component {
 
                     </div>
 
-                </section>
+                </div>
 
-            </html>
+            </section>
 
         );
     }
