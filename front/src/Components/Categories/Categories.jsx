@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HeaderAfterLogin from '../Header/HeaderAfterLogin'
-import {Link} from 'react-router-dom'; 
+import {Link} from 'react-router-dom';
+import axios from "axios";
 import './CategoriesStyle.css'
 
 class Categories extends Component {
@@ -31,7 +32,7 @@ class Categories extends Component {
         this.setState(newState)
     }
 
-    deleteCategory(nameCategory){
+    deleteCategory(index){
         let arrayCategory = this.state.categories;
         arrayCategory.splice(index, 1)
         console.log(index)
