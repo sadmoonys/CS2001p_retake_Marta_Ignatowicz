@@ -55,10 +55,13 @@ class Categories extends Component {
             }
         })
             .then(response => {
-                for (int n = 0; n<= response.data.length; n++){
-                    this.createNote(response.data[n].id, response.data[n].categories)
-                }
-            }
+                for (var n = 0; n<= response.data.length; n++){
+                    this.createNote(response.data[n].categories)
+                }//might add "response.data[n].id, " into the thing above
+            })
+            .catch(error => {
+                console.log(error)
+            })
     }
 
 
