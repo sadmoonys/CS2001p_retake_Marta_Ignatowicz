@@ -3,11 +3,13 @@ import HeaderAfterLogin from '../Header/HeaderAfterLogin'
 import {Link} from 'react-router-dom';
 import axios from "axios";
 import './CategoriesStyle.css'
+import Auth from "../../Auth";
 
 class Categories extends Component {
     constructor() {
         super()
         this.state = {
+    //        id:"",
             categories: [],
             adding: false
         }
@@ -47,9 +49,16 @@ class Categories extends Component {
     }
 
     componentDidMount() {
-        axios.get('/api/notes/load', {
-            
-        }
+        axios.get('/api/api/categories/loadCategory', {
+            headers: {
+                'Authorization': `Bearer ${Auth.token}`
+            }
+        })
+            .then(response => {
+                for (int n = 0; n<= response.data.length; n++){
+                    this.createNote(response.data[n].id, response.data[n].categories)
+                }
+            }
     }
 
 
