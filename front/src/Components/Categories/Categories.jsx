@@ -46,6 +46,11 @@ class Categories extends Component {
 
     }
 
+    componentDidMount() {
+        axios.get('/api/notes/load', {
+            
+        }
+    }
 
 
     render() {
