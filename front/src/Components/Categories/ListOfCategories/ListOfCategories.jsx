@@ -13,9 +13,9 @@ class ListOfCategories extends Component {
 
               <NoteCard 
               indice = {index}
-              deleteNote={this.props.deleteCategory}
-              updateNote={this.props.updateCategory}
-              title={note.title} 
+              deleteCategory={this.props.deleteCategory}
+              updateCategory={this.props.updateCategory}
+              title={note.title}
               text={note.text}
               id={note.id}
               />
