@@ -1,6 +1,7 @@
 .insideNote {
     color: white;
     padding: 3rem;
+    max-width: 350px;
 }
 
 .titleNote {
