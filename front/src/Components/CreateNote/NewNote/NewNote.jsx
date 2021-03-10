@@ -4,12 +4,6 @@ import Auth from '../../../Auth';
 import "./NewNoteStyle.css"
 
 class NewNote extends Component {
-  constructor(props) {
-    super(props);
-    this.title = "";
-    this.text = "";
-  }
-
   handleChangeTitle(e) {
     e.stopPropagation();
     this.title = e.target.value;
