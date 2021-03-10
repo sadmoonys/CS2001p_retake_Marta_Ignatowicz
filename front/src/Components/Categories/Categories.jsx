@@ -10,7 +10,7 @@ class Categories extends Component {
         super()
         this.state = {
             id:"",
-            categories:"",
+            categories:[],
             adding: false
         }
     }
@@ -28,14 +28,20 @@ class Categories extends Component {
         }
     }
 
-    addCategories(id, nameCategory) {
-        const newCategory = { id:id, nameCategory:nameCategory};
-        const newArrayCategory = [...this.state.categories, newCategory];
-      //  this.setState(newState)
-        const newCategoryState = {
-            categories: newArrayCategory
-        }
+ //   addCategories(id, nameCategory) {
+   //     const newCategory = { id:id, nameCategory:nameCategory};
+     //   const newArrayCategory = [...this.state.categories, newCategory];
+   //     this.setState(newState)
+    //    const newCategoryState = {
+      //      categories: newArrayCategory
+    //    }
+  //  }
+    addCategories(nameCategory) {
+        const newArrayCategory = [...this.state.categories, nameCategory]
+        const newState = { ...this.state, categories: newArrayCategory }
+        this.setState(newState)
     }
+    
 
     deleteCategory(index){
         let arrayCategory = this.state.categories;
