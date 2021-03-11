@@ -1,0 +1,16 @@
+footer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.power {
+    border: auto;
+    border-style: solid;
+    border-color: black;
+    max-width: 1200px;
+    font-size: x-large;
+    width: 100%;
+    height: 50px;
+}

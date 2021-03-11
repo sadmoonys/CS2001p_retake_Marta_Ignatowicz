@@ -1,0 +1,34 @@
+.insideNote {
+    color: white;
+    padding: 3rem;
+    max-width: 350px;
+}
+
+.titleNote {
+    border-bottom: solid #4D5970;
+    font-size: x-large;
+    padding: 0.3rem;
+}
+
+.textNote {
+    font-size: larger;
+    padding: 1rem;
+}
+
+.changeTitle {
+    resize: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: larger;
+    color: white;
+    background-color: #58ACDB;
+}
+
+.changeText {
+    resize: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: larger;
+    color: white;
+    background-color: #58ACDB;
+}

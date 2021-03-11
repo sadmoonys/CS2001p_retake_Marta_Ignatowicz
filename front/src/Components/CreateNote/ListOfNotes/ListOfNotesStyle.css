@@ -1,0 +1,12 @@
+.NotesArea {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.notesAlone {
+    margin: 1%;
+    border-radius: 0.7rem;
+    background-color: #58ACDB;
+    box-shadow: 0.2rem 0.3rem 0.3rem black;
+}
