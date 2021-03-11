@@ -41,7 +41,7 @@ class Categories extends Component {
         const newState = { ...this.state, categories: newArrayCategory }
         this.setState(newState)
     }
-    
+
 
     deleteCategory(index){
         let arrayCategory = this.state.categories;
@@ -59,6 +59,7 @@ class Categories extends Component {
 
     componentDidMount() {
         axios.get('/api/categories/loadCategory', {
+            //Problem with the loadCategory URL
             headers: {
                 'Authorization': `Bearer ${Auth.token}`
             }
@@ -93,10 +94,12 @@ class Categories extends Component {
                             return <div className="folders" key={index}>
                                 <Link 
                                 to={{ pathname:"/CreateNote", data:categories}}
+                                //FIX NEEDED HERE
                                 className="renderFolders"
                                 style={{ textDecoration: 'none', color:'white' }}
                                 >
                                     {categories}
+
                                 </Link>
 
                             </div>
