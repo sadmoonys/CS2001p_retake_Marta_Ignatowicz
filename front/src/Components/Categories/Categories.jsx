@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HeaderAfterLogin from '../Header/HeaderAfterLogin'
-import {Link} from 'react-router-dom'; 
+import {Link} from 'react-router-dom';
+import axios from 'axios'
 import './CategoriesStyle.css'
 
 class Categories extends Component {
