@@ -4,6 +4,14 @@ import { Form, Button } from 'react-bootstrap';
 const EditCard = (props) => {
 	const [formData, setFormData] = useState({ header: '', content: '' });
 
+	const submitCallback = (status, error = '') => {
+		if (status === 200) {
+			setFormData({ header: '', content: '' });
+		} else {
+			alert(error);
+		}
+	};
+
 	const handelSubmit = (e) => {
 		props.handelSubmit(formData, submitCallback);
 	};
