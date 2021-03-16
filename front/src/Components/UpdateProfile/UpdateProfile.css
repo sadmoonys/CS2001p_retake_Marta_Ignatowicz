@@ -1,5 +1,12 @@
+::placeholder {
+    color:grey;
+    opacity: 40%
+
+    }
+
 .H {
     text-align: center;
+    color: white;
 }
 
 .Update {
@@ -16,4 +23,28 @@
 
 .Update {
     height: -200px;
+}
+
+.UP{
+    border-radius: 6px;
+    padding: 8px;
+    color: white;
+    --webkit-appearance: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.699) 0px 3px 0px;
+    background-color:#58ACDB;
+
+
+}
+
+.PreviousSc, .UpdateN, .CurrentC, .EnterN{
+color: white;
+
+}
+main{
+display: flex;
+flex-direction: column;   
+margin: 5vh 0;
+align-items: center;
+
 }

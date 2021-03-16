@@ -8,7 +8,8 @@ import UpdateProfile from './Components/UpdateProfile/UpdateProfile'
 import Categories from './Components/Categories/Categories'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute'
-
+import Search from './Components/Categories/Search'
+import PageError from './Components/PageError/PageError'
 function App() {
     return ( 
         <Router>
@@ -18,9 +19,16 @@ function App() {
                 <Route exact path="/CreateNote" component={CreateNote}/>
                 <Route exact path="/Categories" component={Categories}/>
                 <Route exact path="/UserProfile" component={UserProfile}/>
+
                 <ProtectedRoute exact path="/UpdateProfile" component={UpdateProfile}/>
                 <Route exact path="/" component={LandingIndex}/>
-                <Route path="*" component={() => "404 NOT FOUND"}/>
+              
+
+              
+          
+                <Route exact path="/Search" component={Search}/>
+                <Route path="*" component= {PageError}/>
+
                 
             </Switch>
         </Router>

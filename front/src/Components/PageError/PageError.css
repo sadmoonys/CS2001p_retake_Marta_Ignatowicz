@@ -1,0 +1,32 @@
+*{
+    font-family: Arial, sans serif;
+ }
+.container-404 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 50rem;
+  }
+  .Sorry{
+      color: white;
+      text-align: center;
+      font-weight: bold;
+  }
+  .image-404 {
+    width: 100px;
+  }
+  .Four{
+      color: white;
+      text-align: center;
+      font-size: 5rem;
+      margin: .3rem;
+      font-weight: bold;
+      
+  }
+  .Exist{
+      color: white;
+      text-align: center;
+      font-weight: bold;
+
+  }
