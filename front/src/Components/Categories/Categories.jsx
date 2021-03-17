@@ -16,6 +16,8 @@ class Categories extends Component {
     constructor() {
         super()
         this.state = {
+            id: "",
+            category_name: "",
             categories: [],
             adding: false,
             search: ''
@@ -62,11 +64,32 @@ class Categories extends Component {
         this.setState((item))
     }
 
+//insert axios stuff
 
+    componentDidMount() {
+        axios.get('/api/categories/loadCategory', {
+            headers: {
+                'Authorization': `Bearer ${Auth.token}`
+            }
+        })
+            .then(response => {
+       //         console.log(response.data[1].category_name)
+                for (var i = 0; i<=response.data.length; i++){
+                    this.addCategories(response.data[i].category_name)
+                }
+
+
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
 
 
 
 //end of acois cat
+
+
     handleSearch = (e) => {
         console.log(e.target.value)
         this.setState({ search: e.target.value})
@@ -112,7 +135,9 @@ class Categories extends Component {
                                 {categories}
 */}
                             </div>
-                        })} 
+                        }
+
+                        )}
 
 
                {
