@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import axios from 'axios'
 import './CategoriesStyle.css'
 import Search from './Search.js'
+import Auth from "../../Auth";
 
 
 
@@ -15,6 +16,8 @@ class Categories extends Component {
     constructor() {
         super()
         this.state = {
+            id: "",
+            category_name: "",
             categories: [],
             adding: false,
             search: ''
@@ -35,16 +38,65 @@ class Categories extends Component {
     handlerEventInput(e) {
         e.preventDefault();
         if (e.keyCode === 13) {
+            //call axios post method in here
             let categoryValue = e.target.value;
             this.addCategories(categoryValue);
         }
     }
 
     addCategories(nameCategory) {
-        const newArrayCategory = [...this.state.categories, nameCategory]
-        const newState = { ...this.state, categories: newArrayCategory }
-        this.setState(newState)
+        if (nameCategory !=null){
+            const newArrayCategory = [...this.state.categories, nameCategory]
+            const newState = { ...this.state, categories: newArrayCategory }
+            this.setState(newState)
+        }else{
+            console.log("Error")
+        }
     }
+
+
+    deleteCategory(index){
+        let arrayCategory = this.state.categories;
+        arrayCategory.splice(index, 1)
+        console.log(index)
+        this.setState({ category: arrayCategory })
+    }
+
+
+    updateCategory(index,categories, id){
+        const updateArray= this.state.categories
+        let item = {...updateArray[updateArray[index]= {id:id, categories:categories}]}
+        this.setState((item))
+    }
+
+    //sendCategory method post method using AXIOS
+
+//insert axios stuff
+
+    componentDidMount() {
+        axios.get('/api/categories/loadCategory', {
+            headers: {
+                'Authorization': `Bearer ${Auth.token}`
+            }
+        })
+            .then(response => {
+       //         console.log(response.data[1].category_name)
+                for (var i = 0; i<=response.data.length; i++){
+                    this.addCategories(response.data[i].category_name)
+                }
+
+
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
+
+
+//end of acois cat
+
+
     handleSearch = (e) => {
         console.log(e.target.value)
         this.setState({ search: e.target.value})
@@ -76,6 +128,7 @@ class Categories extends Component {
                                 <Link 
                                 to={{pathname:"/CreateNote", data:categories}}
                                 className="renderFolders"
+                                //add the buttons (edit and delete) in here
                                 style={{ textDecoration: 'none', color:'white' }}
                                 >
                                     {categories}
@@ -90,7 +143,9 @@ class Categories extends Component {
                                 {categories}
 */}
                             </div>
-                        })} 
+                        }
+
+                        )}
 
 
                {
@@ -98,6 +153,7 @@ class Categories extends Component {
                                 <div className="folders">
                                     <input
                                         type="text"
+                                        //use this to make text
                                         placeholder="Add a new category"
                                         onKeyUp={this.handlerEventInput.bind(this)} />
                                     <div onClick={() => this.setState({ adding: false })}>cancel</div>
