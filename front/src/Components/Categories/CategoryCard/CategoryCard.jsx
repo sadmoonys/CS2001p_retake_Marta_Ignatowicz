@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './NoteCardStyle.css'
+import './CategoryCardStyle.css'
 import { ReactComponent as Delete } from '../../../Images/delete.svg'
 import { ReactComponent as Edit } from '../../../Images/create-24px.svg'
 import { ReactComponent as Editing } from '../../../Images/done-24px.svg'
@@ -67,7 +67,7 @@ class CategoryCard extends Component {
 
   render() {
     return (this.state.isInEdit ?
-      <section className="insideNote">
+      <section className="insideCategories">
         <header>
           <textarea
             className="changeTitle"
@@ -85,10 +85,10 @@ class CategoryCard extends Component {
       
       </section>
       :
-      <section className="insideNote">
+      <section className="insideCategories">
         <h4>{this.props.category}</h4>
         <header>
-          <h3 className="titleNote">{this.props.title}</h3>
+          <h3 className="titleCategories">{this.props.title}</h3>
         </header>
       </section>
 
