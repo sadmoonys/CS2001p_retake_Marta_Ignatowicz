@@ -38,15 +38,20 @@ class Categories extends Component {
     handlerEventInput(e) {
         e.preventDefault();
         if (e.keyCode === 13) {
+            //call axios post method in here
             let categoryValue = e.target.value;
             this.addCategories(categoryValue);
         }
     }
 
     addCategories(nameCategory) {
-        const newArrayCategory = [...this.state.categories, nameCategory]
-        const newState = { ...this.state, categories: newArrayCategory }
-        this.setState(newState)
+        if (nameCategory !=null){
+            const newArrayCategory = [...this.state.categories, nameCategory]
+            const newState = { ...this.state, categories: newArrayCategory }
+            this.setState(newState)
+        }else{
+            console.log("Error")
+        }
     }
 
 
@@ -63,6 +68,8 @@ class Categories extends Component {
         let item = {...updateArray[updateArray[index]= {id:id, categories:categories}]}
         this.setState((item))
     }
+
+    //sendCategory method post method using AXIOS
 
 //insert axios stuff
 
@@ -121,6 +128,7 @@ class Categories extends Component {
                                 <Link 
                                 to={{pathname:"/CreateNote", data:categories}}
                                 className="renderFolders"
+                                //add the buttons (edit and delete) in here
                                 style={{ textDecoration: 'none', color:'white' }}
                                 >
                                     {categories}
@@ -145,6 +153,7 @@ class Categories extends Component {
                                 <div className="folders">
                                     <input
                                         type="text"
+                                        //use this to make text
                                         placeholder="Add a new category"
                                         onKeyUp={this.handlerEventInput.bind(this)} />
                                     <div onClick={() => this.setState({ adding: false })}>cancel</div>
