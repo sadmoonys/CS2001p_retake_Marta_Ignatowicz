@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import axios from 'axios'
 import './CategoriesStyle.css'
 import Search from './Search.js'
+import Auth from "../../Auth";
 
 
 
@@ -45,6 +46,27 @@ class Categories extends Component {
         const newState = { ...this.state, categories: newArrayCategory }
         this.setState(newState)
     }
+
+
+    deleteCategory(index){
+        let arrayCategory = this.state.categories;
+        arrayCategory.splice(index, 1)
+        console.log(index)
+        this.setState({ category: arrayCategory })
+    }
+
+
+    updateCategory(index,categories, id){
+        const updateArray= this.state.categories
+        let item = {...updateArray[updateArray[index]= {id:id, categories:categories}]}
+        this.setState((item))
+    }
+
+
+
+
+
+//end of acois cat
     handleSearch = (e) => {
         console.log(e.target.value)
         this.setState({ search: e.target.value})
