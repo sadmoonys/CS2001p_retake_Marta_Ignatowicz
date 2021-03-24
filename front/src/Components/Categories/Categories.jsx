@@ -69,7 +69,9 @@ class Categories extends Component {
         this.setState((item))
     }
 
-    //sendCategory method post method using AXIOS
+    //sendCategory post method using AXIOS
+
+
 
 //insert axios stuff
 
@@ -82,7 +84,11 @@ class Categories extends Component {
             .then(response => {
        //         console.log(response.data[1].category_name)
                 for (var i = 0; i<=response.data.length; i++){
-                    this.addCategories(response.data[i].category_name)
+                    if (response.data[i].category_name != null){
+                        this.addCategories(response.data[i].category_name)
+                    }else{
+                        return null;
+                    }
                 }
 
 
@@ -94,7 +100,7 @@ class Categories extends Component {
 
 
 
-//end of acois cat
+//end of axios cat
 
 
     handleSearch = (e) => {
@@ -128,7 +134,10 @@ class Categories extends Component {
                                 <Link 
                                 to={{pathname:"/CreateNote", data:categories}}
                                 className="renderFolders"
-                                //add the buttons (edit and delete) in here
+                                    //delete button
+                                    
+                                    //add the buttons (edit and delete) in here
+
                                 style={{ textDecoration: 'none', color:'white' }}
                                 >
                                     {categories}

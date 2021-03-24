@@ -3,26 +3,21 @@ import axios from 'axios';
 import Auth from '../../../Auth';
 import "./NewNoteStyle.css"
 
-class NewNote extends Component {
+class NewCategory extends Component {
   handleChangeTitle(e) {
     e.stopPropagation();
-    this.title = e.target.value;
+    this.category_name = e.target.value;
   }
 
-  handleChangeNote(e) {
-    e.stopPropagation();
-    this.text = e.target.value;
-  }
 
-  createNote(e) {
+  addCategories(e) {
     e.stopPropagation();
     e.preventDefault();
-    this.props.createNote(this.id, this.title, this.text);
+    this.props.addCategories(this.category_name);
     
     const formatJSON  = 
       {
-        title : this.title,
-        text: this.text
+        category_name : this.category_name,
       }
     
     console.log(formatJSON)
@@ -30,7 +25,7 @@ class NewNote extends Component {
     const config = {
       headers: { Authorization: `Bearer ${Auth.token}` }
     };
-    axios.post('/api/notes/send', formatJSON, config)
+    axios.post('/api/categories/sendCategory', formatJSON, config)
       .then(response => {
         console.log(response)
       })
@@ -43,7 +38,7 @@ class NewNote extends Component {
   render() {
     return (
       <form className="noteArea"
-        onSubmit={this.createNote.bind(this)}>
+        onSubmit={this.addCategories.bind(this)}>
 
         <textarea
           className="inputTitle"

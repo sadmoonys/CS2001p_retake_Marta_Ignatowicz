@@ -8,7 +8,7 @@ class ListOfCategories extends Component {
   render() {
     return (
       <ul className="CategoryArea">
-        {this.props.notes.map((note, index) => {
+        {this.props.notes.map((category, index) => {
           return (
             <div className="categoryAlone" key={index}>
 
