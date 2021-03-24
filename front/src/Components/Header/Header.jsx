@@ -12,7 +12,6 @@ class Header extends Component {
                     Home
                 </Link>
                 <nav className="options">Discovery</nav>
-                <nav className="options" href="">Social</nav>
                 <nav className="options">Contact</nav>
 
                 <Link style={{ textDecoration: 'none' }} to="/SignIn" className="SignButton">
