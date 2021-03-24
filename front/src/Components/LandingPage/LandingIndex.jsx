@@ -12,7 +12,9 @@ class LandingIndex extends Component {
         return (
             <section>
                 <Header />
-                <main >
+                <main>
+                <p>Accomplish more with Noteware!</p>
+                <button type="button" className="UP">Sign</button>
                     <div className="firstBox">
                         <div className="box">
                             <img className="collaboration" src={notes} alt="" />
@@ -50,13 +52,7 @@ class LandingIndex extends Component {
                             <p> Comment section- You can receive feedbacks from your colleagues and help them by commenting your thoughts!</p>
                             <br></br>
                             <p> Votes and Ranks- You can vote what the best notes and resume!</p>
-                        </div>
-
-                        
-                        <img className="screens" src={Screens} alt="" />
-
-                        <button type="button" className="UP">Sign</button>
-                        
+                        </div>                       
                     </div>
                 </main>
                 <Footer />

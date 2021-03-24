@@ -54,7 +54,7 @@ main {
 }
 
 .secondBox {
-    
+
     display: flex;
     max-width: 1200px;
 }
@@ -64,7 +64,7 @@ main {
     border-style: solid;
     border-radius: 0.99em;
     border-color: #2b2b2b;
-    background-color: #fff44f;
+    background-color: #58ACDB;
 }
 
 .screens {
@@ -93,4 +93,16 @@ main {
     .screens {
         width: 50%;
     }
+.UP{
+   border-radius: 10px;
+    padding: 8px;
+    color: white;
+    --webkit-appearance: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.699) 0px 3px 0px;
+    background-color:#58ACDB;
+
+}
+
+
 }
