@@ -31,32 +31,33 @@ class LandingIndex extends Component {
                                     NOTEWARE is a notetaking app that aims to address the UN's goal to provide Quality Education for everyone.
                                 <br></br>
                                     <br></br>
-                                    <br></br>
-                                We aim to help students connect and learn through our app. You can use our collabroative platform to create, edit and share notes as well as categorise them using hashtags to help improve your search.
-                                <br></br>
-                                Thanks to the app being interactive, you can use feedback left by other students to improve your notes and get the most of your time!
                             </p>
                                 <br></br>
                             </div>
                         </div>
                     </div>
-
-
                     <div className="secondBox">
                         <div className="benfits"> <b></b>
                             <p> BENIFITS OF USING NOTEWARE </p>
                             <br></br>
                             <br></br>
-                            <p> Notesfeed- You can share your notes with Friends  </p>
+                            <p> Store notes- Best place to keep all of your notes safe </p>
                             <br></br>
-                            <p> Comment section- You can recieve feedbacks from your collegues and help them by commenting your thoughts!</p>
+                            <p> Notesfeed- You can share your notes with your friends!</p>
                             <br></br>
                             <p> Votes and Ranks- You can vote what the best notes and resumes. </p>
+                            <br></br>
+                            <p> Comment section- You can receive feedbacks from your colleagues and help them by commenting your thoughts!</p>
+                            <br></br>
+                            <p> Votes and Ranks- You can vote what the best notes and resume!</p>
                         </div>
 
+                        
                         <img className="screens" src={Screens} alt="" />
-                    </div>
 
+                        <button type="button" className="UP">Sign</button>
+                        
+                    </div>
                 </main>
                 <Footer />
             </section>
@@ -65,3 +66,14 @@ class LandingIndex extends Component {
 }
 
 export default LandingIndex;
+
+//<div className="firstBox">
+//<div className="box">
+//<img className="collaboration" src={notes} alt="" />
+//<div className='signUp'>
+  //  <Link to="/Signup" className="btn">
+ //       SIGN UP HERE
+ //   </Link  >
+ //   <p>JOIN NOTWARE TODAY!</p>
+//</div>
+//</div>

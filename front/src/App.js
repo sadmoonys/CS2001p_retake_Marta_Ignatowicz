@@ -20,7 +20,7 @@ function App() {
                 <Route exact path="/Categories" component={Categories}/>
                 <Route exact path="/UserProfile" component={UserProfile}/>
 
-                <ProtectedRoute exact path="/UpdateProfile" component={UpdateProfile}/>
+                <Route exact path="/UpdateProfile" component={UpdateProfile}/>
                 <Route exact path="/" component={LandingIndex}/>
               
 
