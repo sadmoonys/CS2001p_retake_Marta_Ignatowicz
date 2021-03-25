@@ -100,13 +100,15 @@ class Signuppage extends Component {
                             value={confirmPass}
                             onChange={this.changeHandler}
                             />
+                             <button className="Createbutton" type="submit">Create</button>
+                      
+
+                      {/* <label for="submit"></label> */}
                         </div>
-                        <button className="CREATE AN ACCOUNT" type="submit">Create Account</button>
-
-
-                        {/* <label for="submit"></label> */}
+                       
 
                         </form>
+                        
                         <meta name="google-signin-client_id" content="12345678-gbgin9h7q69rpjehq1cd2441b4nosnid.apps.googleusercontent.com"></meta>
                         
                         <GoogleLogin
