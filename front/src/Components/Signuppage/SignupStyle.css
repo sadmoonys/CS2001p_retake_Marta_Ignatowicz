@@ -6,40 +6,23 @@ main {
 
 .yellowBoxUP {
     width: 70%;
-    background-color:  #4D5970;
+    background-color: #fff76a;
     border-radius: 0.99em;
     text-align: center;
     max-width: 1200px;
     margin: 5%;
 }
 
-.signup {
-    font-size: xx-large;
+.Signup {
+    font-size: x-large;
     font-weight: bold;
-    color: white;
-}
-.Createbutton {
-
-    background-color: #58ACDB;
-    border-radius: 0.99em;
-    color: white;
-    transition: 400ms;
-    width: 100px;
-    height: 50px;
-    display: inline;
-   
-}
-.Createbutton:hover {
-    transform: scale(1.2) perspective(0.5px);
-    
 }
 
 .logSection {
-    background-color: #4D5970;
-    border-radius: 2em;
-    min-width: 200px;
-    margin: 2 auto;
+    background-color: #FFCE5C;
+    margin: 0 auto;
     vertical-align: middle;
+    width: 40%;
 }
 
 .userBox {
@@ -59,9 +42,8 @@ label {
     margin: 0;
 }
 
-.submit { 
-    background-color: #58ACDB;
+.submit {
+    background-color: white;
     transition: 400ms;
     width: auto;
-    color: white; 
 }

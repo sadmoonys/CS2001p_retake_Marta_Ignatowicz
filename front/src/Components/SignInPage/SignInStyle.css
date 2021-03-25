@@ -2,12 +2,11 @@ main {
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: #4D5970;
 }
 
 .yellowBox {
     width: 70%;
-    background-color: #4D5970;
+    background-color: #fff76a;
     border-radius: 0.99em;
     text-align: center;
     max-width: 1200px;
@@ -15,21 +14,18 @@ main {
     margin: 5%;
 }
 
-.logSection {   
-    background-color:#707070;
-    margin: 0 auto;
-    vertical-align: middle;
-    width: 40%;
-}
-
 .logIn {
     font-size: x-large;
     font-weight: bold;
-    color:white
-   
 }
 
-
+.logSection {
+    background-color: #FFCE5C;
+    border-radius: 2em;
+    min-width: 300px;
+    margin: 2 auto;
+    vertical-align: middle;
+}
 
 input {
     display: inline-block;
@@ -41,7 +37,6 @@ input {
 label {
     display: block;
     margin: 0;
-  
 }
 
 .username {
@@ -53,7 +48,7 @@ label {
 }
 
 .submit {
-background-color: #58ACDB;
+    background-color: white;
     border-radius: 0.99em;
     transition: 400ms;
     width: auto;
