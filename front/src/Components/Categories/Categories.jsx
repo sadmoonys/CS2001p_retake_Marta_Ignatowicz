@@ -5,7 +5,7 @@ import axios from 'axios'
 import './CategoriesStyle.css'
 import Search from './Search.js'
 import Auth from "../../Auth";
-
+import deleteButton from "../../Images/delete.svg"
 
 
 
@@ -74,10 +74,10 @@ class Categories extends Component {
 
 
     deleteCategory(index){
-        let arrayCategory = this.state.categories;
-        arrayCategory.splice(index, 1)
+   //     let arrayCategory = this.state.categories;
+   //     arrayCategory.splice(index, 1)
         console.log(index)
-        this.setState({ category: arrayCategory })
+  //      this.setState({ category: arrayCategory })
     }
 
 
@@ -153,13 +153,15 @@ class Categories extends Component {
                                 to={{pathname:"/CreateNote", data:categories}}
                                 className="renderFolders"
                                     //delete button
-                                    
                                     //add the buttons (edit and delete) in here
-
                                 style={{ textDecoration: 'none', color:'white' }}
+                            
                                 >
                                     {categories}
                                 </Link>
+
+                                <img src = {deleteButton} onClick = {this.deleteCategory()}/>
+                                
 
 
                             {/* <link // 
