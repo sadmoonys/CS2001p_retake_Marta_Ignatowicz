@@ -51,7 +51,7 @@ class SignInPage extends Component {
                 <Header />
                 <main>
                     <div className="yellowBox">
-                        <p className="logIn">Log in</p>
+                        <p className="logIn">Login</p>
                         <form className="logSection" onSubmit={this.submitHandler}>
                             <div className="username">
                                 <img alt="" src={User} />
