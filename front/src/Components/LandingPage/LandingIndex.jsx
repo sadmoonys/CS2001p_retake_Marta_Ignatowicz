@@ -18,12 +18,7 @@ class LandingIndex extends Component {
                     <div className="firstBox">
                         <div className="box">
                             <img className="collaboration" src={notes} alt="" />
-                            <div className='signUp'>
-                                <Link to="/Signup" className="btn">
-                                    SIGN UP HERE
-                                </Link  >
-                                <p>JOIN NOTWARE TODAY!</p>
-                            </div>
+                           
                         </div>
 
                         <div className="aboutBox" >
