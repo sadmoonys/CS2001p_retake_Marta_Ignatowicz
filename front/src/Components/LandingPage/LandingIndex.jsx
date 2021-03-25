@@ -13,10 +13,11 @@ class LandingIndex extends Component {
             <section>
                 <Header />
                 <main>
-                <p>Accomplish more with Noteware!</p>
-                <button type="button" className="UP">Sign</button>
+                <label className='acc' for="Name">Accomplish more with Noteware</label>
+                <Link to="/Signup" className="UP">SIGN UP HERE </Link  >
                     <div className="firstBox">
                         <div className="box">
+                            
                             <img className="collaboration" src={notes} alt="" />
                            
                         </div>
@@ -41,8 +42,6 @@ class LandingIndex extends Component {
                             <p> Store notes- Best place to keep all of your notes safe </p>
                             <br></br>
                             <p> Notesfeed- You can share your notes with your friends!</p>
-                            <br></br>
-                            <p> Votes and Ranks- You can vote what the best notes and resumes. </p>
                             <br></br>
                             <p> Comment section- You can receive feedbacks from your colleagues and help them by commenting your thoughts!</p>
                             <br></br>
