@@ -26,7 +26,7 @@ function App() {
 
               
           
-                <Route exact path="/Search" component={Search}/>
+                <protectedRoute exact path="/Search" component={Search}/>
                 <Route path="*" component= {PageError}/>
 
                 

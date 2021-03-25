@@ -12,14 +12,18 @@ class LandingIndex extends Component {
         return (
             <section>
                 <Header />
+                <div className="singUp">
+                    <div>
+                        <label className='acc' for="acc">Accomplish more with Noteware</label>
+                        <Link to="/Signup" style={{ textDecoration: 'none' }}className="UP">SIGN UP HERE </Link  >
+
+                    </div>
+                </div>
                 <main>
-                <label className='acc' for="Name">Accomplish more with Noteware</label>
-                <Link to="/Signup" className="UP">SIGN UP HERE </Link  >
                     <div className="firstBox">
                         <div className="box">
-                            
                             <img className="collaboration" src={notes} alt="" />
-                           
+
                         </div>
 
                         <div className="aboutBox" >
@@ -29,7 +33,7 @@ class LandingIndex extends Component {
                                     NOTEWARE is a notetaking app that aims to address the UN's goal to provide Quality Education for everyone.
                                 <br></br>
                                     <br></br>
-                            </p>
+                                </p>
                                 <br></br>
                             </div>
                         </div>
@@ -46,7 +50,7 @@ class LandingIndex extends Component {
                             <p> Comment section- You can receive feedbacks from your colleagues and help them by commenting your thoughts!</p>
                             <br></br>
                             <p> Votes and Ranks- You can vote what the best notes and resume!</p>
-                        </div>                       
+                        </div>
                     </div>
                 </main>
                 <Footer />

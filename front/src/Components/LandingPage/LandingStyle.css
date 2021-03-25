@@ -1,3 +1,38 @@
+.singUp {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: gray;
+    height: 15rem;
+}
+
+.UP {
+    margin-top: 2rem;
+    margin-left: 45rem;
+    margin-right: 45rem;
+    padding: 8px;
+    color: white;
+    -webkit-appearance: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.300) 0px 3px 0px;
+    background-color:#58ACDB; 
+}
+.acc{
+    color: white;
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 1.5rem;
+      font-weight: bold;
+      
+
+}
+.firstBox {
+    display: flex;
+    max-width: 500;
+}
+
+
 main {
     display: flex;
     flex-wrap: wrap;
@@ -6,15 +41,7 @@ main {
     text-align: center;
 }
 
-.firstBox {
-    display: flex;
-    max-width: 1200px;
-}
 
-.box {
-    display: flex;
-    align-items: center;
-}
 
 .aboutBox {
     margin: 3%;
@@ -37,10 +64,11 @@ main {
 
 .benfits {
     margin: 3%;
-    border-style: solid;
+    border-style: solid black;
     border-radius: 0.99em;
-    box-shadow: rgba(0, 0, 0, 0.500) 0px 1x 0px;
+    box-shadow: rgba(0, 0, 0, 0.500) 0px 3x 0px;
     background-color: #58ACDB;
+    color:white
 }
 
 .screens {
@@ -69,15 +97,4 @@ main {
     .screens {
         width: 50%;
     }
-.UP{
-   border-radius: 10px;
-    padding: 8px;
-    color: white;
-    --webkit-appearance: none;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.300) 0px 3px 0px;
-    background-color:#58ACDB;
-
-}
-
 }
