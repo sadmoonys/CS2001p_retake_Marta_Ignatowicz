@@ -33,6 +33,7 @@ class CreateNote extends Component {
         arrayNotes.splice(index, 1);
         console.log(index)
         this.setState({ nota: arrayNotes })
+
     }
 
     updateNote(index, title, text, id){

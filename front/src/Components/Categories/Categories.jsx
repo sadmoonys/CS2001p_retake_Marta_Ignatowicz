@@ -5,7 +5,6 @@ import axios from 'axios'
 import './CategoriesStyle.css'
 import Search from './Search.js'
 import Auth from "../../Auth";
-import deleteButton from "../../Images/delete.svg"
 
 
 
@@ -62,22 +61,27 @@ class Categories extends Component {
     
     }
 
-    addCategories(nameCategory) {
-        if (nameCategory !=null){
-            const newArrayCategory = [...this.state.categories, nameCategory]
-            const newState = { ...this.state, categories: newArrayCategory }
+    addCategories(id, nameCategory) {
+            const newCategory = {id: id, category_name:nameCategory}
+            const newArrayCategory = [...this.state.categories, newCategory]
+            const newState = {categories: newArrayCategory }
             this.setState(newState)
-        }else{
-            console.log("Error")
-        }
     }
 
 
     deleteCategory(index){
-   //     let arrayCategory = this.state.categories;
-   //     arrayCategory.splice(index, 1)
+        let arrayCategory = this.state.categories;
+        arrayCategory.splice(index, 1)
         console.log(index)
-  //      this.setState({ category: arrayCategory })
+        this.setState({ categoryState: arrayCategory })
+        console.log(arrayCategory)
+        const config = {
+            headers: { Authorization: `Bearer ${Auth.token}` }
+        };
+        axios.delete(`/api/categories/delete/${index}`, config)
+            .then(response => {
+                console.log(response)
+             })
     }
 
 
@@ -100,14 +104,17 @@ class Categories extends Component {
             }
         })
             .then(response => {
-       //         console.log(response.data[1].category_name)
-                for (var i = 0; i<=response.data.length; i++){
-                    if (response.data[i].category_name != null){
-                        this.addCategories(response.data[i].category_name)
-                    }else{
-                        return null;
-                    }
-                }
+                console.log(response)
+
+                console.log(response.data.id[0])
+            //   for (var i = 0; i<=response.data.length; i++){
+             //       if (response.data[i].category_name != null){
+             //           this.addCategories(response.data[i].id ,response.data[i].category_name)
+
+             //       }else{
+               //         return null;
+                 //   }
+          //      }
 
 
             })
@@ -127,9 +134,10 @@ class Categories extends Component {
     }
 
     render() {  
-        let filter = this.state.categories.filter((val) => {
-            return val.toLowerCase().includes(this.state.search.toLowerCase())
-        })
+     //   let filter = this.state.categories.filter((val) => {
+       //     return val.toLowerCase().includes(this.state.search.toLowerCase())
+        //})
+        let emptyArray= []
         return (
             <section>
                 <HeaderAfterLogin />
@@ -146,7 +154,7 @@ class Categories extends Component {
                     <Search handleSearch={this.handleSearch} />
 
                     <div className="renderFolders">
-                        {filter.map((categories, index) => {
+                        {emptyArray.map((categories, index) => {
                             return <div className="folders" key={index}>
 
                                 <Link 
@@ -160,11 +168,11 @@ class Categories extends Component {
                                     {categories}
                                 </Link>
 
-                                <img src = {deleteButton} onClick = {this.deleteCategory()}/>
-                                
+                                <div onClick={() => this.deleteCategory(index)}>delete</div>
 
 
-                            {/* <link // 
+
+                            {/* <link //        <img src = {deleteButton} onClick = {this.deleteCategory(index)}/>
                             to = {{ pathname: "/CreateNote", data: categories}} 
                             className="renderFolders"
                             style={{ textDecoration: 'none' , color: 'white'}}
