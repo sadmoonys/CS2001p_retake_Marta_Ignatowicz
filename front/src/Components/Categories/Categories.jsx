@@ -38,20 +38,34 @@ class Categories extends Component {
     handlerEventInput(e) {
         e.preventDefault();
         if (e.keyCode === 13) {
-            //call axios post method in here
-            let categoryValue = e.target.value;
+            var categoryValue = e.target.value;
             this.addCategories(categoryValue);
+
+            const formatJSON  = 
+            {
+              category_name : categoryValue
+            }
+          
+          console.log(formatJSON)
+          
+          const config = {
+            headers: { Authorization: `Bearer ${Auth.token}` }
+          };
+          axios.post('api/categories/sendCategory', formatJSON, config)
+            .then(response => {
+              console.log(response)
+            })
+            .catch(error => {
+              console.log(error)
+            })
         }
+    
     }
 
     addCategories(nameCategory) {
-        if (nameCategory !=null){
             const newArrayCategory = [...this.state.categories, nameCategory]
             const newState = { ...this.state, categories: newArrayCategory }
-            this.setState(newState)
-        }else{
-            console.log("Error")
-        }
+            this.setState(newState)    
     }
 
 
@@ -84,8 +98,6 @@ class Categories extends Component {
                 for (var i = 0; i<=response.data.length; i++){
                     this.addCategories(response.data[i].category_name)
                 }
-
-
             })
             .catch(error => {
                 console.log(error)
