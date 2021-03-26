@@ -1,34 +1,40 @@
-.profdet{
-
-    background-color: #fafafa;
+.profdet {
+    box-shadow: 1rem 1rem 3rem 0.5rem;
     text-align: center;
     border-style: solid;
-    border-color: rgb(253, 255, 255);
     margin: 5%;
-    width:500px;
+    width: 500px;
+    background-color: #58ACDB;
 }
 
-.yellow{
+.updateProfile {
+    color: aliceblue;
+}
+
+.displayInfo {
+    color: white;
+}
+
+.yellow {
     width: 25%;
-   
-
 }
 
-.light_blue{
-
-    width:25%
-
-}
-.red{
-    width:25%
-}
-.green{
-    width:25%
-}
-.side{
-    margin:80px;
+.light_blue {
+    width: 25%
 }
 
-.UP{
+.red {
+    width: 25%
+}
+
+.green {
+    width: 25%
+}
+
+.side {
+    margin: 80px;
+}
+
+.UP {
     color: black;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from "../Header/Header"
-import Footer from "../Footer/Footer"
 import "./UpdateProfile.css"
+import { Link } from 'react-router-dom';
 
 class UpdateProfile extends Component{
     render() { return(
@@ -27,7 +27,7 @@ class UpdateProfile extends Component{
                             <input type="Current Course" placeholder="Current Course"/>  
                             </p>
 
-             <button type="button" className="UP">Update Profile</button>
+                            <Link to="/UserProfile" style={{ textDecoration: 'none' }} Class="UP"> <p> Update Profile </p></Link>
 
             </main>   
            
@@ -36,7 +36,7 @@ class UpdateProfile extends Component{
             
            
 
-                                <Footer/>
+                            
                                 
         </html> 
         );

@@ -42,24 +42,24 @@ class Userprofile extends Component {
             <html>
                 <HeaderAfterLogin />
                 <main >
-                    <h1> My showcase </h1>
+                    <h1 className="displayInfo"> My showcase </h1>
                     <p>
                         {posts.title}</p>
                     <br/>
                     <div className='side'>
                         <div>
-                            <b>  My profile  </b>
+                            <b className="displayInfo">  My profile  </b>
                         </div>
-                        <Link to="/UpdateProfile" Class="UP"> <p> Update Profile </p></Link>
+                        <Link to="/UpdateProfile" style={{ textDecoration: 'none' }} Class="updateProfile"> <p> Update Profile </p></Link>
                     </div>
                     <div className='profdet'>
-                        <p>Name : </p>
+                        <p className="displayInfo">Name : </p>
                         <br/>
-                        <p>  Current school/university :</p>
+                        <p className="displayInfo">  Current school/university :</p>
                         <br/>
-                        <p>Previous Schools:</p>
+                        <p className="displayInfo">Previous Schools:</p>
                         <br/>
-                        <p> Current Course:</p>
+                        <p className="displayInfo"> Current Course:</p>
                     </div>
                     <div>
                         <img className="yellow" src={yellow} alt="" />
@@ -68,7 +68,6 @@ class Userprofile extends Component {
                         <img className="green" src={green} alt="" />
                     </div>
                 </main>
-                <Footer />
             </html>
         );
     }
