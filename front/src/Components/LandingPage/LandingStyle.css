@@ -1,8 +1,8 @@
 .singUp {
     display: flex;
-    flex-direction: column;
     text-align: center;
     justify-content: center;
+    align-items: center;
     background-color: gray;
     height: 15rem;
 }
@@ -24,6 +24,11 @@
     font-size: 1.5rem;
     margin: 1.5rem;
     font-weight: bold;
+}
+
+.penImg {
+    width: 10rem;
+    height: 10rem;
 }
 
 .bodyD {

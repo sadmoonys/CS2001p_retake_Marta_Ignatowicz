@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Header from '../Header/Header'
 import Footer from "../Footer/Footer"
-import Screens from "../../Images/screens.png"
+import pen from "../../Images/pen.png"
 import notes from "../../Images/sharenotes.png"
 import { Link } from 'react-router-dom';
 import "./LandingStyle.css"
@@ -13,9 +13,10 @@ class LandingIndex extends Component {
             <section>
                 <Header />
                 <div className="singUp">
-                    <div>
-                        <label className='acc' for="acc">Accomplish more with Noteware</label>
-                        <Link to="/Signup" style={{ textDecoration: 'none' }} className="UP">SIGN UP HERE </Link  >
+                        <img className="penImg" src={pen} alt=""/>
+                        <div>
+                            <label className='acc' for="acc">Accomplish more with Noteware</label>
+                            <Link to="/Signup" style={{ textDecoration: 'none' }} className="UP">SIGN UP HERE </Link  >
                     </div>
                 </div>
                 <div className="bodyD">
@@ -58,13 +59,3 @@ class LandingIndex extends Component {
 
 export default LandingIndex;
 
-//<div className="firstBox">
-//<div className="box">
-//<img className="collaboration" src={notes} alt="" />
-//<div className='signUp'>
-  //  <Link to="/Signup" className="btn">
- //       SIGN UP HERE
- //   </Link  >
- //   <p>JOIN NOTWARE TODAY!</p>
-//</div>
-//</div>
