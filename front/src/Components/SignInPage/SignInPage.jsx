@@ -89,7 +89,7 @@ class SignInPage extends Component {
                                 cookiePolicy={'single_host_origin'}
                             />
                         </div>
-                        <Link to="/" style={{ textDecoration: 'none' }} className="backHome"> Back home</Link>
+                        <Link to="/" style={{ textDecoration: 'none' }} className="backHome"> Return home</Link>
                     </div>
                    
                 </main>

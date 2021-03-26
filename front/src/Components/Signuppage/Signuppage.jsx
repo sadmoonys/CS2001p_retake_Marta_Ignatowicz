@@ -48,8 +48,11 @@ class Signuppage extends Component {
         const { username, email, password, confirmPass } = this.state;
 
         return (
-            <section>
-                <main>
+
+            <main>
+
+
+                <div className="divMainSingUP">
                     <div className="yellowBoxUP">
                         <p className="signup">Sign Up </p>
                         <form className="logSection" onSubmit={this.submitHandler}>
@@ -100,13 +103,12 @@ class Signuppage extends Component {
                                     value={confirmPass}
                                     onChange={this.changeHandler}
                                 />
-                                <button className="Createbutton" type="submit">Create</button>
+
                             </div>
-
-
+                            <button className="Createbutton" type="submit">Create</button>
                         </form>
 
-                        <meta name="google-signin-client_id" content="12345678-gbgin9h7q69rpjehq1cd2441b4nosnid.apps.googleusercontent.com"></meta>
+                        <div className="or">or</div>
                         <div classname="googleBtn">
                             <GoogleLogin
                                 clientId="887867364491-umfteuv0gbpsbdamnh173rb9j2ljcfqr.apps.googleusercontent.com"
@@ -115,12 +117,17 @@ class Signuppage extends Component {
                                 onFailure={responseGoogle}
                                 cookiePolicy={'single_host_origin'}
                             />
+                            
+                        </div>  
+                        <div className="backHomeSingUP">
+                            <Link to="/" style={{ textDecoration: 'none' }}  className="return1">Return home</Link>
                         </div>
-
+                         
                     </div>
-                    <Link to="/" style={{ textDecoration: 'none' }}> Back home</Link>
-                </main>
-            </section>
+                    
+                </div>
+            </main>
+
         );
     }
 }
