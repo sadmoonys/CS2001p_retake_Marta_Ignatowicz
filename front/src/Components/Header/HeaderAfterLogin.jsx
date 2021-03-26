@@ -14,7 +14,6 @@ class Header extends Component {
                     Home
                 </Link>
                 <nav className="options">Discovery</nav>
-                <nav className="options" href="">Social</nav>
                 <nav className="options">Contact</nav>
                 <div className="profLog">
                     <Link className="myProfileBtn" style={{ textDecoration: 'none' }} to="/UserProfile" >

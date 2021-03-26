@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Header from "../Header/Header"
-import Footer from "../Footer/Footer"
 import "./SignInStyle.css"
 import User from '../../Images/user.svg'
 import Password from '../../Images/vpn_key-24px.svg'
 import axios from 'axios'
 import auth from '../../Auth'
+import { Link } from 'react-router-dom';
+import { GoogleLogin } from 'react-google-login';
 
 
 class SignInPage extends Component {
@@ -34,7 +34,6 @@ class SignInPage extends Component {
                 if (auth.login(response) === true) {
                     this.props.history.push('/Categories')
                 }
-
             })
             .catch(error => {
                 console.log(error)
@@ -43,14 +42,16 @@ class SignInPage extends Component {
     }
 
     render() {
+        const responseGoogle = (response) => {
+            console.log(response);
+          }
 
         const { username, password } = this.state;
 
         return (
             <section>
-                <Header />
                 <main>
-                    <div className="yellowBox">
+                    <div className="greyBox">
                         <p className="logIn">Login</p>
                         <form className="logSection" onSubmit={this.submitHandler}>
                             <div className="username">
@@ -74,10 +75,24 @@ class SignInPage extends Component {
                                     onChange={this.changeHandler} />
                             </div>
                             <input className="submit" type="submit" />
-                        </form>
+                        </form> 
+
+                        <div className="or">or</div>
+                        
+                        <div classname="googleBtn">
+                            <GoogleLogin
+                                
+                                clientId="887867364491-umfteuv0gbpsbdamnh173rb9j2ljcfqr.apps.googleusercontent.com"
+                                buttonText="Login"
+                                onSuccess={responseGoogle}
+                                onFailure={responseGoogle}
+                                cookiePolicy={'single_host_origin'}
+                            />
+                        </div>
+                        <Link to="/" style={{ textDecoration: 'none' }} className="backHome"> Back home</Link>
                     </div>
+                   
                 </main>
-                <Footer />
             </section>
         );
     }
