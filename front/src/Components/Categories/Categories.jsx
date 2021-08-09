@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import axios from 'axios'
 import './CategoriesStyle.css'
 import Search from './Search.js'
-import Auth from "../../Auth";
+import Auth from "./src/Auth.jsx";
 
 
 

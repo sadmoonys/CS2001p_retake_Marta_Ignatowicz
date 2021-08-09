@@ -5,7 +5,7 @@ import { ReactComponent as Edit } from '../../../Images/create-24px.svg'
 import { ReactComponent as Editing } from '../../../Images/done-24px.svg'
 import { ReactComponent as Cancel } from '../../../Images/clear-24px.svg'
 import axios from 'axios';
-import Auth from '../../../Auth';
+import Auth from "./src/Auth.jsx";
 class NoteCard extends Component {
 
   constructor(props) {
