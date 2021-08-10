@@ -4,8 +4,7 @@ import ListOfNotes from './ListOfNotes/ListOfNotes'
 import HeaderAfterLogin from '../Header/HeaderAfterLogin'
 import { Link } from 'react-router-dom';
 import axios from 'axios'
-import Auth from "./src/Auth.jsx";
-
+import Auth from '../../Auth';
 import './CreateNoteStyle.css'
 
 

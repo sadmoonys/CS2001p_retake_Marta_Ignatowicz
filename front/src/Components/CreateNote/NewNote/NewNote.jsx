@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import Auth from "./src/Auth.jsx";
+import Auth from '../../../Auth';
 import "./NewNoteStyle.css"
 
 class NewNote extends Component {

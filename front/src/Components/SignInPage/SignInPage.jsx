@@ -3,7 +3,7 @@ import "./SignInStyle.css"
 import User from '../../Images/user.svg'
 import Password from '../../Images/vpn_key-24px.svg'
 import axios from 'axios'
-import Auth from "./src/Auth.jsx";
+import auth from '../../Auth'
 import { Link } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
 
