@@ -26,7 +26,7 @@ public class UserUpdateController {
             return target;
         });
 
-        return ResponseEntity.ok(new MessageResponse("User updated successfully"));
+       return ResponseEntity.ok(new MessageResponse("User updated successfully"));
     }
 
 }

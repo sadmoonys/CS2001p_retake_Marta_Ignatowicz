@@ -8,6 +8,8 @@ import javax.validation.constraints.Size;
 import java.util.HashSet;
 import java.util.Set;
 
+import static org.apache.tomcat.jni.Mmap.delete;
+
 
 @Entity
 @Table(	name = "users",
@@ -72,6 +74,7 @@ public class User {
         this.currentCourse = currentCourse;
     }
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -109,4 +112,5 @@ public class User {
         this.email = email;
         this.password = password;
     }
+
 }
