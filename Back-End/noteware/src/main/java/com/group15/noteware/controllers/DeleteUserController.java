@@ -14,6 +14,17 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("/api/deleteuser")
 public class DeleteUserController {
+    @Autowired
+    private UserRepository userRepository;
 
+    @PostMapping("/deleteuser")
+    public ResponseEntity<?> deleteUser(@Valid @RequestBody DeleteUserRequest deleteUserRequest) {
+        userRepository.findByUsername(deleteUserRequest.getUsername()).map(target -> {
+            target.setId(Long.valueOf(1), DeleteUserRequest.getId());
+            userRepository.save(target);
+            return target;
+        });
+        return ResponseEntity.ok(new MessageResponse("User deleted successfully"));
+    }
 
 }
