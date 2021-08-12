@@ -1,0 +1,102 @@
+
+.UP {
+    margin-top: 2rem;
+    width: 20rem;
+    padding: 8px;
+    color: white;
+    -webkit-appearance: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.300) 0px 3px 0px;
+    background-color: #58ACDB;
+}
+
+.acc {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1.5rem;
+    font-weight: bold;
+}
+
+.penImg {
+    width: 10rem;
+    height: 10rem;
+}
+
+.bodyD {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.firstBox {
+    display: flex;
+}
+
+.firstDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondDiv {
+    display: flex;
+    max-width: 1200px;
+}
+
+.aboutBox {
+    margin: 5rem;
+    background-color: #fff44f;
+    transform: rotate(10deg);
+    padding: 2%;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25rem;
+}
+
+.collaboration {
+    width: 35rem;
+    height: 25rem;
+}
+
+.benfits {
+    margin: 3rem;
+    margin-top: 10rem;
+    padding: 3rem;
+    border-style: solid black;
+    border-radius: 0.99rem;
+    box-shadow: rgba(0, 0, 0, 0.500) 0px 3x 0px;
+    background-color: #58ACDB;
+    color: white
+}
+
+.screens {
+    width: 50%;
+}
+
+@media screen and (max-width: 760px) {
+    main {}
+    .firstBox {
+        display: block;
+    }
+    .box {
+        display: block;
+        align-items: center;
+    }
+    .signUp {
+        margin-left: 8%;
+    }
+    .collaboration {
+        width: 50%;
+        margin-right: 8%;
+    }
+    .secondBox {
+        display: block;
+    }
+    .screens {
+        width: 50%;
+    }
+}
